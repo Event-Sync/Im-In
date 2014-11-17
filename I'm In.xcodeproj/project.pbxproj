@@ -15,6 +15,12 @@
 		52FFCCD21A1A795F00745607 /* I_m_InTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCD11A1A795F00745607 /* I_m_InTests.m */; };
 		D519DF131A1A7F980076EE0E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF121A1A7F980076EE0E /* MenuViewController.m */; };
 		D519DF4E1A1A88CA0076EE0E /* concert.png in Resources */ = {isa = PBXBuildFile; fileRef = D519DF4D1A1A88CA0076EE0E /* concert.png */; };
+		D519DF511A1A90500076EE0E /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF501A1A90500076EE0E /* SignUpViewController.m */; };
+		D519DF541A1A90610076EE0E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF531A1A90610076EE0E /* LoginViewController.m */; };
+		D519DF571A1A908E0076EE0E /* ActivityTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF561A1A908E0076EE0E /* ActivityTabViewController.m */; };
+		D519DF5A1A1A909D0076EE0E /* ProfileTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF591A1A909D0076EE0E /* ProfileTabViewController.m */; };
+		D519DF5D1A1A90B10076EE0E /* NewActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF5C1A1A90B10076EE0E /* NewActivityViewController.m */; };
+		D519DF601A1A90C30076EE0E /* ViewActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF5F1A1A90C30076EE0E /* ViewActivityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,18 @@
 		D519DF111A1A7F980076EE0E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		D519DF121A1A7F980076EE0E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		D519DF4D1A1A88CA0076EE0E /* concert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = concert.png; sourceTree = "<group>"; };
+		D519DF4F1A1A90500076EE0E /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		D519DF501A1A90500076EE0E /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		D519DF521A1A90610076EE0E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D519DF531A1A90610076EE0E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D519DF551A1A908E0076EE0E /* ActivityTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTabViewController.h; sourceTree = "<group>"; };
+		D519DF561A1A908E0076EE0E /* ActivityTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTabViewController.m; sourceTree = "<group>"; };
+		D519DF581A1A909D0076EE0E /* ProfileTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTabViewController.h; sourceTree = "<group>"; };
+		D519DF591A1A909D0076EE0E /* ProfileTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTabViewController.m; sourceTree = "<group>"; };
+		D519DF5B1A1A90B10076EE0E /* NewActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewActivityViewController.h; sourceTree = "<group>"; };
+		D519DF5C1A1A90B10076EE0E /* NewActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewActivityViewController.m; sourceTree = "<group>"; };
+		D519DF5E1A1A90C30076EE0E /* ViewActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewActivityViewController.h; sourceTree = "<group>"; };
+		D519DF5F1A1A90C30076EE0E /* ViewActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewActivityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +142,18 @@
 			children = (
 				D519DF111A1A7F980076EE0E /* MenuViewController.h */,
 				D519DF121A1A7F980076EE0E /* MenuViewController.m */,
+				D519DF4F1A1A90500076EE0E /* SignUpViewController.h */,
+				D519DF501A1A90500076EE0E /* SignUpViewController.m */,
+				D519DF521A1A90610076EE0E /* LoginViewController.h */,
+				D519DF531A1A90610076EE0E /* LoginViewController.m */,
+				D519DF551A1A908E0076EE0E /* ActivityTabViewController.h */,
+				D519DF561A1A908E0076EE0E /* ActivityTabViewController.m */,
+				D519DF581A1A909D0076EE0E /* ProfileTabViewController.h */,
+				D519DF591A1A909D0076EE0E /* ProfileTabViewController.m */,
+				D519DF5B1A1A90B10076EE0E /* NewActivityViewController.h */,
+				D519DF5C1A1A90B10076EE0E /* NewActivityViewController.m */,
+				D519DF5E1A1A90C30076EE0E /* ViewActivityViewController.h */,
+				D519DF5F1A1A90C30076EE0E /* ViewActivityViewController.m */,
 			);
 			name = "Controller Layer";
 			path = ..;
@@ -250,9 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D519DF601A1A90C30076EE0E /* ViewActivityViewController.m in Sources */,
 				52FFCCB81A1A795F00745607 /* AppDelegate.m in Sources */,
+				D519DF571A1A908E0076EE0E /* ActivityTabViewController.m in Sources */,
 				D519DF131A1A7F980076EE0E /* MenuViewController.m in Sources */,
+				D519DF511A1A90500076EE0E /* SignUpViewController.m in Sources */,
+				D519DF5D1A1A90B10076EE0E /* NewActivityViewController.m in Sources */,
 				52FFCCB51A1A795F00745607 /* main.m in Sources */,
+				D519DF541A1A90610076EE0E /* LoginViewController.m in Sources */,
+				D519DF5A1A1A909D0076EE0E /* ProfileTabViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
