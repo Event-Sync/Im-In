@@ -200,9 +200,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="piY-hh-r1Y"/>
                                 <exclude reference="a1H-9j-dlv"/>
                                 <exclude reference="irX-sc-XH2"/>
-                                <exclude reference="piY-hh-r1Y"/>
                             </mask>
                         </variation>
                     </view>
