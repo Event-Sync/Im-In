@@ -14,6 +14,11 @@
 		52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCC41A1A795F00745607 /* LaunchScreen.xib */; };
 		52FFCCD21A1A795F00745607 /* I_m_InTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCD11A1A795F00745607 /* I_m_InTests.m */; };
 		52FFCCE31A1A978300745607 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCE21A1A978300745607 /* NetworkController.m */; };
+		52FFCCE71A1AA8FE00745607 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCE51A1AA8FE00745607 /* ActivityTableViewCell.m */; };
+		52FFCCE81A1AA8FE00745607 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCE61A1AA8FE00745607 /* ActivityTableViewCell.xib */; };
+		52FFCCEC1A1AAE1000745607 /* activity.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCEB1A1AAE1000745607 /* activity.jpeg */; };
+		52FFCCEF1A1AAEEA00745607 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCEE1A1AAEEA00745607 /* Activity.m */; };
+		52FFCCF21A1AB78000745607 /* Invitee.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCF11A1AB78000745607 /* Invitee.m */; };
 		D519DF131A1A7F980076EE0E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF121A1A7F980076EE0E /* MenuViewController.m */; };
 		D519DF4E1A1A88CA0076EE0E /* concert.png in Resources */ = {isa = PBXBuildFile; fileRef = D519DF4D1A1A88CA0076EE0E /* concert.png */; };
 		D519DF511A1A90500076EE0E /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF501A1A90500076EE0E /* SignUpViewController.m */; };
@@ -48,6 +53,14 @@
 		52FFCCD11A1A795F00745607 /* I_m_InTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = I_m_InTests.m; sourceTree = "<group>"; };
 		52FFCCE11A1A978300745607 /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
 		52FFCCE21A1A978300745607 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
+		52FFCCE41A1AA8FE00745607 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
+		52FFCCE51A1AA8FE00745607 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
+		52FFCCE61A1AA8FE00745607 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		52FFCCEB1A1AAE1000745607 /* activity.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = activity.jpeg; sourceTree = "<group>"; };
+		52FFCCED1A1AAEEA00745607 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		52FFCCEE1A1AAEEA00745607 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		52FFCCF01A1AB78000745607 /* Invitee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invitee.h; sourceTree = "<group>"; };
+		52FFCCF11A1AB78000745607 /* Invitee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invitee.m; sourceTree = "<group>"; };
 		D519DF111A1A7F980076EE0E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		D519DF121A1A7F980076EE0E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		D519DF4D1A1A88CA0076EE0E /* concert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = concert.png; sourceTree = "<group>"; };
@@ -115,6 +128,7 @@
 		52FFCCB21A1A795F00745607 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				52FFCCEB1A1AAE1000745607 /* activity.jpeg */,
 				52FFCCC21A1A795F00745607 /* Images.xcassets */,
 				52FFCCB31A1A795F00745607 /* Info.plist */,
 				52FFCCB41A1A795F00745607 /* main.m */,
@@ -169,6 +183,10 @@
 			children = (
 				52FFCCB61A1A795F00745607 /* AppDelegate.h */,
 				52FFCCB71A1A795F00745607 /* AppDelegate.m */,
+				52FFCCED1A1AAEEA00745607 /* Activity.h */,
+				52FFCCEE1A1AAEEA00745607 /* Activity.m */,
+				52FFCCF01A1AB78000745607 /* Invitee.h */,
+				52FFCCF11A1AB78000745607 /* Invitee.m */,
 			);
 			name = "Model Layer";
 			path = ..;
@@ -177,6 +195,9 @@
 		D519DF101A1A7F480076EE0E /* View Layer */ = {
 			isa = PBXGroup;
 			children = (
+				52FFCCE41A1AA8FE00745607 /* ActivityTableViewCell.h */,
+				52FFCCE51A1AA8FE00745607 /* ActivityTableViewCell.m */,
+				52FFCCE61A1AA8FE00745607 /* ActivityTableViewCell.xib */,
 				52FFCCC41A1A795F00745607 /* LaunchScreen.xib */,
 				52FFCCBF1A1A795F00745607 /* Main.storyboard */,
 			);
@@ -266,6 +287,8 @@
 			files = (
 				52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */,
 				52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */,
+				52FFCCE81A1AA8FE00745607 /* ActivityTableViewCell.xib in Resources */,
+				52FFCCEC1A1AAE1000745607 /* activity.jpeg in Resources */,
 				52FFCCC31A1A795F00745607 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FFCCE71A1AA8FE00745607 /* ActivityTableViewCell.m in Sources */,
 				D519DF601A1A90C30076EE0E /* ViewActivityViewController.m in Sources */,
 				52FFCCB81A1A795F00745607 /* AppDelegate.m in Sources */,
 				D519DF571A1A908E0076EE0E /* ActivityTabViewController.m in Sources */,
@@ -294,6 +318,8 @@
 				D519DF5D1A1A90B10076EE0E /* NewActivityViewController.m in Sources */,
 				52FFCCB51A1A795F00745607 /* main.m in Sources */,
 				D519DF541A1A90610076EE0E /* LoginViewController.m in Sources */,
+				52FFCCF21A1AB78000745607 /* Invitee.m in Sources */,
+				52FFCCEF1A1AAEEA00745607 /* Activity.m in Sources */,
 				D519DF5A1A1A909D0076EE0E /* ProfileTabViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
