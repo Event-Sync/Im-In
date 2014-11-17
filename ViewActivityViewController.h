@@ -10,4 +10,12 @@
 
 @interface ViewActivityViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *firstAttendeeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *secondAttendeeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *thirdAttendeeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fourthAttendeeLabel;
+
 @end
