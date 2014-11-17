@@ -13,6 +13,7 @@
 		52FFCCC31A1A795F00745607 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCC21A1A795F00745607 /* Images.xcassets */; };
 		52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCC41A1A795F00745607 /* LaunchScreen.xib */; };
 		52FFCCD21A1A795F00745607 /* I_m_InTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCD11A1A795F00745607 /* I_m_InTests.m */; };
+		52FFCCE31A1A978300745607 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCE21A1A978300745607 /* NetworkController.m */; };
 		D519DF131A1A7F980076EE0E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF121A1A7F980076EE0E /* MenuViewController.m */; };
 		D519DF4E1A1A88CA0076EE0E /* concert.png in Resources */ = {isa = PBXBuildFile; fileRef = D519DF4D1A1A88CA0076EE0E /* concert.png */; };
 		D519DF511A1A90500076EE0E /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF501A1A90500076EE0E /* SignUpViewController.m */; };
@@ -45,6 +46,8 @@
 		52FFCCCB1A1A795F00745607 /* I'm InTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "I'm InTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFCCD01A1A795F00745607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FFCCD11A1A795F00745607 /* I_m_InTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = I_m_InTests.m; sourceTree = "<group>"; };
+		52FFCCE11A1A978300745607 /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
+		52FFCCE21A1A978300745607 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
 		D519DF111A1A7F980076EE0E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		D519DF121A1A7F980076EE0E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		D519DF4D1A1A88CA0076EE0E /* concert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = concert.png; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 		D519DF0E1A1A7F370076EE0E /* Controller Layer */ = {
 			isa = PBXGroup;
 			children = (
+				52FFCCE11A1A978300745607 /* NetworkController.h */,
+				52FFCCE21A1A978300745607 /* NetworkController.m */,
 				D519DF111A1A7F980076EE0E /* MenuViewController.h */,
 				D519DF121A1A7F980076EE0E /* MenuViewController.m */,
 				D519DF4F1A1A90500076EE0E /* SignUpViewController.h */,
@@ -284,6 +289,7 @@
 				52FFCCB81A1A795F00745607 /* AppDelegate.m in Sources */,
 				D519DF571A1A908E0076EE0E /* ActivityTabViewController.m in Sources */,
 				D519DF131A1A7F980076EE0E /* MenuViewController.m in Sources */,
+				52FFCCE31A1A978300745607 /* NetworkController.m in Sources */,
 				D519DF511A1A90500076EE0E /* SignUpViewController.m in Sources */,
 				D519DF5D1A1A90B10076EE0E /* NewActivityViewController.m in Sources */,
 				52FFCCB51A1A795F00745607 /* main.m in Sources */,
