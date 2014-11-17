@@ -65,9 +65,6 @@
 		52FFCCA61A1A795F00745607 = {
 			isa = PBXGroup;
 			children = (
-				D519DF101A1A7F480076EE0E /* View Layer */,
-				D519DF0F1A1A7F420076EE0E /* Model Layer */,
-				D519DF0E1A1A7F370076EE0E /* Controller Layer */,
 				52FFCCB11A1A795F00745607 /* I'm In */,
 				52FFCCCE1A1A795F00745607 /* I'm InTests */,
 				52FFCCB01A1A795F00745607 /* Products */,
@@ -86,6 +83,9 @@
 		52FFCCB11A1A795F00745607 /* I'm In */ = {
 			isa = PBXGroup;
 			children = (
+				D519DF0F1A1A7F420076EE0E /* Model Layer */,
+				D519DF0E1A1A7F370076EE0E /* Controller Layer */,
+				D519DF101A1A7F480076EE0E /* View Layer */,
 				52FFCCB21A1A795F00745607 /* Supporting Files */,
 			);
 			path = "I'm In";
@@ -126,6 +126,7 @@
 				D519DF121A1A7F980076EE0E /* MenuViewController.m */,
 			);
 			name = "Controller Layer";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D519DF0F1A1A7F420076EE0E /* Model Layer */ = {
@@ -135,6 +136,7 @@
 				52FFCCB71A1A795F00745607 /* AppDelegate.m */,
 			);
 			name = "Model Layer";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D519DF101A1A7F480076EE0E /* View Layer */ = {
@@ -144,6 +146,7 @@
 				52FFCCBF1A1A795F00745607 /* Main.storyboard */,
 			);
 			name = "View Layer";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
