@@ -1,11 +1,13 @@
 {
-    "name": "Matt", // should be dictionary item
+    "name": "Matt",
     "phone_number": "+12064669834",
     "events_created": [
                        {
+                       "event_id": 1,
                        "event_name": "Interstellar movie meetup",
+                       "event_description": "movie meetup description",
                        "event_location": "Code Fellows Cinema",
-                       "event_time": "MM/NN/YYYY HH:MMAM",
+                       "event_time": "12/01/2014 19:00PM",
                        "event_expired": false,
                        "status_code": 200,
                        "invitees": [
@@ -19,7 +21,28 @@
                                     "phone_number": "+12064669834",
                                     "confirmed": false
                                     }
-                                    ]}
+                                    ]
+                       },
+                       {
+                       "event_id": 2,
+                       "event_name": "Past event",
+                       "event_description": "Past event descript",
+                       "event_location": "Code Fellows Cinema 2",
+                       "event_time": "10/01/2014 19:00PM",
+                       "event_expired": true,
+                       "status_code": 200,
+                       "invitees": [
+                                    {
+                                    "name": "Sam",
+                                    "phone_number": "+12064669834",
+                                    "confirmed": false
+                                    },
+                                    {
+                                    "name": "Sam",
+                                    "phone_number": "+12064669834",
+                                    "confirmed": false
+                                    }
+                                    ]
+                       }
                        ]
-    
 }
