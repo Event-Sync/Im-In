@@ -61,8 +61,17 @@
 //NSArray *jsonArray = jsonDict[@"items"];
 //XCTAssertTrue([jsonArray isKindOfClass:[NSArray class]], @"JSON file is not an array class");
 
+- (void) fetchAllEventsUsingPath: (void(^) (NSError *error, NSMutableArray *response)) completionHandler {
+    NSString *pathToJSON = [[NSBundle mainBundle] pathForResource:@"allactivities" ofType:@"json"];
+    NSData *JSONEventData = [NSData dataWithContentsOfFile:pathToJSON];
+    
+    NSMutableArray *eventArray = [[NSMutableArray alloc] init];
+    eventArray = [Activity parseJSONDataIntoActivities:JSONEventData];
+    
+    completionHandler(nil, eventArray);
+}
 
-- (void) fetchEventWithCompletion: (NSString *) eventId completionHandler: (void(^) (NSError *error, NSMutableArray *activies)) completionHandler {
+- (void) fetchEventWithCompletion: (NSString *) eventId completionHandler: (void(^) (NSError *error, NSMutableArray *response)) completionHandler {
     NSString *urlString = [NSString stringWithFormat: @"%@%@%@",kAPI, @"Event/_", eventId];
     
     NSURL *url = [[NSURL alloc] initWithString:urlString];
@@ -88,7 +97,7 @@
     [dataTask resume];
 }
 
-- (void) fetchAllEventsWithCompletion: (void(^) (NSError *error, NSMutableArray *activies)) completionHandler {
+- (void) fetchAllEventsWithCompletion: (void(^) (NSError *error, NSMutableArray *response)) completionHandler {
     
     NSString *urlString = [NSString stringWithFormat: @"%@%@",kAPI, @"Event/"];
 

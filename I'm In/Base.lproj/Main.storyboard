@@ -421,6 +421,9 @@
                                     <segment title="Upcoming"/>
                                     <segment title="Past"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlPressed:" destination="S80-Oi-CJ5" eventType="valueChanged" id="ygX-Oy-rv0"/>
+                                </connections>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="activity.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="NRk-tN-c7N">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="109"/>
@@ -454,6 +457,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="h9u-Ui-77y"/>
                     <navigationItem key="navigationItem" id="Ewh-Le-mCO"/>
+                    <connections>
+                        <outlet property="tableView" destination="dQf-4g-Tbc" id="tT2-EJ-OXP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sm9-vL-q7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

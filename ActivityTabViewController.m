@@ -7,16 +7,54 @@
 //
 
 #import "ActivityTabViewController.h"
+#import "Activity.h"
+#import "ActivityTableViewCell.h"
+#import "NetworkController.h"
 
-@interface ActivityTabViewController ()
+@interface ActivityTabViewController () 
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *activities;
+@property (strong, nonatomic) NSArray *filteredActivities;
 
 @end
 
 @implementation ActivityTabViewController
 
+- (IBAction)segmentedControlPressed:(UISegmentedControl *)sender {
+    
+    NSPredicate *upcoming = [NSPredicate predicateWithFormat:@"eventExpired == %@", [NSNumber numberWithBool:NO]];
+    NSPredicate *past = [NSPredicate predicateWithFormat:@"eventExpired == %@", [NSNumber numberWithBool:YES]];
+    NSArray *newArray = [NSArray arrayWithArray:_activities];
+
+    if (sender.selectedSegmentIndex == 0) {
+        _filteredActivities = [newArray filteredArrayUsingPredicate:upcoming];
+    } else {
+        _filteredActivities = [newArray filteredArrayUsingPredicate:past];
+    }
+    
+    NSLog(@"%lu", (unsigned long) _filteredActivities.count);
+    
+    [_tableView reloadData];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // load activities array
+    
+    [[NetworkController sharedInstance] fetchAllEventsUsingPath:^(NSError *error, NSMutableArray *response) {
+        if (error != nil) {
+            NSLog(@"%@", error.localizedDescription);
+        } else {
+            _activities = response;
+            _filteredActivities  = [NSArray arrayWithArray:_activities];
+        }
+    }];
+    
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +62,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _filteredActivities.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ActivityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL" forIndexPath:indexPath];
+    
+    Activity *newActivity = _filteredActivities[indexPath.row];
+    cell.textLabel.text = newActivity.eventDescription;
+    
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+
 
 @end

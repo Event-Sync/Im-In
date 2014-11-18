@@ -3,6 +3,7 @@
     "owner_name":"Sam",
     "phone_number":"+12064669834",
     "event_name":"Interstellar movie meetup",
+    "event_description": "movie meetup description",
     "event_location": "Code Fellows Cinema",
     "event_time": "MM/NN/YYYY HH:MMAM",
     "status_code": 200,
