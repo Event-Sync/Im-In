@@ -31,7 +31,7 @@
     return self;
 }
 
-- (NSMutableArray *)parseJSONDataIntoActivities: (NSData *)rawJSONData {
++ (NSMutableArray *)parseJSONDataIntoActivities: (NSData *)rawJSONData {
     NSError *error = nil;
     NSMutableArray *activities = [[NSMutableArray alloc]init];
     NSDictionary *searchJSONDictionary = [NSJSONSerialization JSONObjectWithData:rawJSONData options:0 error:&error];

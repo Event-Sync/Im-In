@@ -11,6 +11,6 @@
 @interface Activity : NSObject
 
 - (instancetype) initWithDictionary: (NSDictionary *) activityDictionary;
-- (NSMutableArray *) parseJSONDataIntoActivities: (NSData *)rawJSONData;
++ (NSMutableArray *) parseJSONDataIntoActivities: (NSData *)rawJSONData;
 
 @end

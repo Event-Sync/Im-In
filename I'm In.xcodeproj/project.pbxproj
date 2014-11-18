@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520DD4331A1BBE4F004EBE2B /* signup.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD4321A1BBE4F004EBE2B /* signup.json */; };
+		520DD4351A1BBE66004EBE2B /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD4341A1BBE66004EBE2B /* login.json */; };
+		520DD4371A1BBED9004EBE2B /* loginConfirmation.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD4361A1BBED9004EBE2B /* loginConfirmation.json */; };
+		520DD4391A1BBEF2004EBE2B /* allactivities.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD4381A1BBEF2004EBE2B /* allactivities.json */; };
+		520DD43B1A1BBF08004EBE2B /* newActivity.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD43A1A1BBF08004EBE2B /* newActivity.json */; };
 		52FFCCB51A1A795F00745607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB41A1A795F00745607 /* main.m */; };
 		52FFCCB81A1A795F00745607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB71A1A795F00745607 /* AppDelegate.m */; };
 		52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCBF1A1A795F00745607 /* Main.storyboard */; };
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		520DD4321A1BBE4F004EBE2B /* signup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = signup.json; path = "I'm In/signup.json"; sourceTree = "<group>"; };
+		520DD4341A1BBE66004EBE2B /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = login.json; path = "I'm In/login.json"; sourceTree = "<group>"; };
+		520DD4361A1BBED9004EBE2B /* loginConfirmation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = loginConfirmation.json; path = "I'm In/loginConfirmation.json"; sourceTree = "<group>"; };
+		520DD4381A1BBEF2004EBE2B /* allactivities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = allactivities.json; path = "I'm In/allactivities.json"; sourceTree = "<group>"; };
+		520DD43A1A1BBF08004EBE2B /* newActivity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = newActivity.json; path = "I'm In/newActivity.json"; sourceTree = "<group>"; };
 		52FFCCAF1A1A795F00745607 /* I'm In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I'm In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFCCB31A1A795F00745607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FFCCB41A1A795F00745607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,6 +71,7 @@
 		52FFCCEE1A1AAEEA00745607 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		52FFCCF01A1AB78000745607 /* Invitee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invitee.h; sourceTree = "<group>"; };
 		52FFCCF11A1AB78000745607 /* Invitee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invitee.m; sourceTree = "<group>"; };
+		52FFCCF31A1ACB3100745607 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		D519DF111A1A7F980076EE0E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		D519DF121A1A7F980076EE0E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		D519DF4D1A1A88CA0076EE0E /* concert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = concert.png; sourceTree = "<group>"; };
@@ -181,12 +192,18 @@
 		D519DF0F1A1A7F420076EE0E /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
+				520DD4321A1BBE4F004EBE2B /* signup.json */,
+				520DD4341A1BBE66004EBE2B /* login.json */,
+				520DD4361A1BBED9004EBE2B /* loginConfirmation.json */,
+				520DD4381A1BBEF2004EBE2B /* allactivities.json */,
+				520DD43A1A1BBF08004EBE2B /* newActivity.json */,
 				52FFCCB61A1A795F00745607 /* AppDelegate.h */,
 				52FFCCB71A1A795F00745607 /* AppDelegate.m */,
 				52FFCCED1A1AAEEA00745607 /* Activity.h */,
 				52FFCCEE1A1AAEEA00745607 /* Activity.m */,
 				52FFCCF01A1AB78000745607 /* Invitee.h */,
 				52FFCCF11A1AB78000745607 /* Invitee.m */,
+				52FFCCF31A1ACB3100745607 /* Constant.h */,
 			);
 			name = "Model Layer";
 			path = ..;
@@ -285,11 +302,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520DD4371A1BBED9004EBE2B /* loginConfirmation.json in Resources */,
 				52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */,
 				52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */,
+				520DD43B1A1BBF08004EBE2B /* newActivity.json in Resources */,
 				52FFCCE81A1AA8FE00745607 /* ActivityTableViewCell.xib in Resources */,
+				520DD4331A1BBE4F004EBE2B /* signup.json in Resources */,
 				52FFCCEC1A1AAE1000745607 /* activity.jpeg in Resources */,
+				520DD4351A1BBE66004EBE2B /* login.json in Resources */,
 				52FFCCC31A1A795F00745607 /* Images.xcassets in Resources */,
+				520DD4391A1BBEF2004EBE2B /* allactivities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
