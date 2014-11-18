@@ -33,7 +33,7 @@
     
     [self setConfiguration: [NSURLSessionConfiguration defaultSessionConfiguration]];
     [self setSession: [NSURLSession sessionWithConfiguration: _configuration]];return self;
-    [self setAuthToken: @"Test"];
+//    [self setAuthToken: @"Test"];
 }
 
 - (void) dealloc {
@@ -41,13 +41,52 @@
 }
 
 //
-//https://iamin.herokuapp.com/
+//https://iamin.herokuapp.com/Event/_123123
 //.post(/api/newEvent)-to make new event -  Sam
 //.get('/api/Event/_id')-to retrieve an event
 //.delete('/api/Event/delete/_id')-to delete event - Matt
 //.put('/api/Event/_id')-to update event
 //.get('/api/Event/)-retrieve all events - Sam
 //
+//NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+//NSString *path = [bundle pathForResource:@"questions" ofType:@"json"];
+//XCTAssertNotNil(path, @"fail to locate questions.json file");
+//
+//NSData *jsonData = [NSData dataWithContentsOfFile:path];
+//XCTAssertNotNil(jsonData, @"fail to load JSON file");
+//
+//NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+//XCTAssertNotNil(jsonDict, @"jsonData is nil");
+//
+//NSArray *jsonArray = jsonDict[@"items"];
+//XCTAssertTrue([jsonArray isKindOfClass:[NSArray class]], @"JSON file is not an array class");
+
+
+- (void) fetchEventWithCompletion: (NSString *) eventId completionHandler: (void(^) (NSError *error, NSMutableArray *activies)) completionHandler {
+    NSString *urlString = [NSString stringWithFormat: @"%@%@%@",kAPI, @"Event/_", eventId];
+    
+    NSURL *url = [[NSURL alloc] initWithString:urlString];
+    
+    NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error != nil) {
+            NSLog(@"%@", error.localizedDescription);
+        } else {
+            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+            NSInteger statusCode = httpResponse.statusCode;
+            
+            if (statusCode >= 200 && statusCode <= 299) {
+                // need to declare a activity mutable array
+                NSMutableArray *activities = [Activity parseJSONDataIntoActivities:data];
+                
+                // return to main queue
+                [[NSOperationQueue mainQueue] addOperationWithBlock: ^{
+                    completionHandler(nil, activities);
+                }];
+            }
+        }
+    }];
+    [dataTask resume];
+}
 
 - (void) fetchAllEventsWithCompletion: (void(^) (NSError *error, NSMutableArray *activies)) completionHandler {
     
@@ -74,20 +113,6 @@
         }
      }];
     [dataTask resume];
-}
-
-
-- (NSData *)encodeDictionary:(NSDictionary *)dictionary {
-    
-    NSMutableArray *parts = [[NSMutableArray alloc] init];
-    for (NSString *key in dictionary) {
-        NSString *encodedValue = [[dictionary objectForKey:key] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        NSString *encodedKey = [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        NSString *part = [NSString stringWithFormat: @"%@=%@", encodedKey, encodedValue];
-        [parts addObject:part];
-    }
-    NSString *encodedDictionary = [parts componentsJoinedByString:@"&"];
-    return [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (void) createNewEventWithCompletion: (NSDictionary *) newEventDictionary completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler  {
@@ -141,6 +166,21 @@
     [dataTask resume];
 
 }
+
+
+- (NSData *)encodeDictionary:(NSDictionary *)dictionary {
+    
+    NSMutableArray *parts = [[NSMutableArray alloc] init];
+    for (NSString *key in dictionary) {
+        NSString *encodedValue = [[dictionary objectForKey:key] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *encodedKey = [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *part = [NSString stringWithFormat: @"%@=%@", encodedKey, encodedValue];
+        [parts addObject:part];
+    }
+    NSString *encodedDictionary = [parts componentsJoinedByString:@"&"];
+    return [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
+}
+
 
 
 @end

@@ -11,6 +11,7 @@
 @interface NetworkController : NSObject
 @property (nonatomic, strong) NSString *authToken;
 + (id) sharedInstance;
+- (void) fetchEventWithCompletion: (NSString *) eventId completionHandler: (void(^) (NSError *error, NSMutableArray *activies)) completionHandler;
 - (void) fetchAllEventsWithCompletion: (void(^) (NSError *error, NSMutableArray *activies)) completionHandler;
 - (void) createNewEventWithCompletion: (NSDictionary *) newEventDictionary completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler;
 @end
