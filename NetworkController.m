@@ -7,6 +7,9 @@
 //
 
 #import "NetworkController.h"
+#import "Constant.h"
+#import <UIKit/UIKit.h>
+#import "Activity.h"
 
 @interface NetworkController()
 @property (nonatomic, strong) NSURLSession *session;
@@ -37,15 +40,19 @@
     
 }
 
-- (void) fetchActivities:completionHandler: (void(^) (NSError *error, NSMutableArray *response)) completionHandler {
-    NSString *urlString = nil;
+//
+//https://iamin.herokuapp.com/
+//.post(/api/newEvent)-to make new event -  Sam
+//.get('/api/Event/_id')-to retrieve an event
+//.delete('/api/Event/delete/_id')-to delete event - Matt
+//.put('/api/Event/_id')-to update event
+//.get('/api/Event/)-retrieve all events - Sam
+//
+
+- (void) fetchAllEventsWithCompletion: (void(^) (NSError *error, NSMutableArray *activies)) completionHandler {
     
-    if (_authToken != nil) {
-        urlString = [NSString stringWithFormat:@"https://www.twilio.com/advanced?access_token=@%", _authToken];
-    } else {
-        urlString = [NSString stringWithFormat:@"https://www.twilio.com/advanced"];
-    }
-    
+    NSString *urlString = [NSString stringWithFormat: @"%@%@",kAPI, @"Event/"];
+
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     
     NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -57,7 +64,7 @@
             
             if (statusCode >= 200 && statusCode <= 299) {
                 // need to declare a activity mutable array
-                NSMutableArray *activities = nil;
+                NSMutableArray *activities = [Activity parseJSONDataIntoActivities:data];
                 
                 // return to main queue
                 [[NSOperationQueue mainQueue] addOperationWithBlock: ^{
@@ -69,36 +76,71 @@
     [dataTask resume];
 }
 
-- (void) createNewActivity: completionHandler: (void(^) (NSError *error, NSMutableArray *response)) completionHandler {
-    NSString *urlString = nil;
+
+- (NSData *)encodeDictionary:(NSDictionary *)dictionary {
     
-    if (_authToken != nil) {
-        urlString = [NSString stringWithFormat:@"https://www.twilio.com/advanced?access_token=@%", _authToken];
-    } else {
-        urlString = [NSString stringWithFormat:@"https://www.twilio.com/advanced"];
+    NSMutableArray *parts = [[NSMutableArray alloc] init];
+    for (NSString *key in dictionary) {
+        NSString *encodedValue = [[dictionary objectForKey:key] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *encodedKey = [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *part = [NSString stringWithFormat: @"%@=%@", encodedKey, encodedValue];
+        [parts addObject:part];
     }
+    NSString *encodedDictionary = [parts componentsJoinedByString:@"&"];
+    return [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (void) createNewEventWithCompletion: (NSDictionary *) newEventDictionary completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler  {
     
-    NSURL *url = [[NSURL alloc] initWithString:urlString];
+    NSString *urlString = [NSString stringWithFormat: @"%@%@",kAPI, @"newEvent"];
+
+    NSURL *url = [NSURL URLWithString:urlString];
     
-    NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSDictionary *postDict = [NSDictionary dictionaryWithObjectsAndKeys:@"user", @"username",
+                              @"password", @"password", nil];
+    
+    NSData *postData = [self encodeDictionary:postDict];
+    
+    // Create the request
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)postData.length] forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
         if (error != nil) {
-            NSLog(@"%@", error.localizedDescription);
-        } else {
-            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-            NSInteger statusCode = httpResponse.statusCode;
-            
-            if (statusCode >= 200 && statusCode <= 299) {
-                // need to declare a activity mutable array
-                NSMutableArray *activities = nil;
-                
-                // return to main queue
-                [[NSOperationQueue mainQueue] addOperationWithBlock: ^{
-                    completionHandler(nil, activities);
-                }];
+            if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
+                NSLog(@"HTTP Error: %ld %@", (long)httpResponse.statusCode, error);
+                return;
             }
+            NSLog(@"Error %@", error);
+            return;
         }
+        
+        if (response != nil) {
+            if ([response isKindOfClass: [NSHTTPURLResponse class]]) {
+                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+            
+                if (httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299) {
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        completionHandler (nil, YES);
+                    }];
+                } else {
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        completionHandler (error, NO);
+                    }];
+                }
+            }
+                
+        }
+
     }];
     [dataTask resume];
+
 }
+
 
 @end

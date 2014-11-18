@@ -1,0 +1,25 @@
+{
+    "name": "Matt", // should be dictionary item
+    "phone_number": "+12064669834",
+    "events_created": [
+                       {
+                       "event_name": "Interstellar movie meetup",
+                       "event_location": "Code Fellows Cinema",
+                       "event_time": "MM/NN/YYYY HH:MMAM",
+                       "event_expired": false,
+                       "status_code": 200,
+                       "invitees": [
+                                    {
+                                    "name": "Sam",
+                                    "phone_number": "+12064669834",
+                                    "confirmed": false
+                                    },
+                                    {
+                                    "name": "Sam",
+                                    "phone_number": "+12064669834",
+                                    "confirmed": false
+                                    }
+                                    ]}
+                       ]
+    
+}
