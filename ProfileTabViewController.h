@@ -10,4 +10,7 @@
 
 @interface ProfileTabViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *nameEntryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
+
 @end
