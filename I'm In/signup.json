@@ -1,5 +1,5 @@
 {
-    "name": "Matt", // should be dictionary item
-    "phone_number": "+12064669834",
+    "name": "Matt",
+    "phone_number": "2064669834",
     "password": "password123"
 }

@@ -20,5 +20,8 @@
     self.title = @"New Event";
 }
 
+- (IBAction)createButtonPressed:(id)sender {
+    NSLog(@"Create Button Pressed!");
+}
 
 @end
