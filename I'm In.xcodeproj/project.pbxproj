@@ -33,7 +33,7 @@
 		D519DF5A1A1A909D0076EE0E /* ProfileTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF591A1A909D0076EE0E /* ProfileTabViewController.m */; };
 		D519DF5D1A1A90B10076EE0E /* NewActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF5C1A1A90B10076EE0E /* NewActivityViewController.m */; };
 		D519DF601A1A90C30076EE0E /* ViewActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF5F1A1A90C30076EE0E /* ViewActivityViewController.m */; };
-		D58655F11A1C68A600736DFC /* people.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D58655F01A1C68A600736DFC /* people.jpg */; };
+		D58655F31A1D068800736DFC /* waterPeople.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D58655F21A1D068800736DFC /* waterPeople.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +90,7 @@
 		D519DF5C1A1A90B10076EE0E /* NewActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewActivityViewController.m; sourceTree = "<group>"; };
 		D519DF5E1A1A90C30076EE0E /* ViewActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewActivityViewController.h; sourceTree = "<group>"; };
 		D519DF5F1A1A90C30076EE0E /* ViewActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewActivityViewController.m; sourceTree = "<group>"; };
-		D58655F01A1C68A600736DFC /* people.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = people.jpg; path = ../../people.jpg; sourceTree = "<group>"; };
+		D58655F21A1D068800736DFC /* waterPeople.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waterPeople.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,7 @@
 		52FFCCB21A1A795F00745607 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D58655F01A1C68A600736DFC /* people.jpg */,
+				D58655F21A1D068800736DFC /* waterPeople.jpeg */,
 				52FFCCEB1A1AAE1000745607 /* activity.jpeg */,
 				52FFCCC21A1A795F00745607 /* Images.xcassets */,
 				52FFCCB31A1A795F00745607 /* Info.plist */,
@@ -310,9 +310,9 @@
 			files = (
 				520DD4371A1BBED9004EBE2B /* loginConfirmation.json in Resources */,
 				52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */,
-				D58655F11A1C68A600736DFC /* people.jpg in Resources */,
 				52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */,
 				520DD43B1A1BBF08004EBE2B /* newActivity.json in Resources */,
+				D58655F31A1D068800736DFC /* waterPeople.jpeg in Resources */,
 				52FFCCE81A1AA8FE00745607 /* ActivityTableViewCell.xib in Resources */,
 				520DD4331A1BBE4F004EBE2B /* signup.json in Resources */,
 				52FFCCEC1A1AAE1000745607 /* activity.jpeg in Resources */,
