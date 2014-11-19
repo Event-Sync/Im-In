@@ -7,6 +7,7 @@
 //
 
 #import "ProfileTabViewController.h"
+#import "MenuViewController.h"
 
 @interface ProfileTabViewController ()
 
@@ -17,10 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.title = @"Profile";
 }
 
 - (IBAction)logoutButtonPressed:(id)sender {
     NSLog(@"Logout Pressed");
+    MenuViewController *menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MENU_VC"];
+    [self presentViewController:menuVC animated:true completion:nil];
 }
 
 

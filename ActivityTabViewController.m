@@ -10,6 +10,7 @@
 #import "Activity.h"
 #import "ActivityTableViewCell.h"
 #import "NetworkController.h"
+#import "NewActivityViewController.h"
 
 @interface ActivityTabViewController () 
 
@@ -41,7 +42,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newEventButtonPressed)];
+    
+    self.navigationItem.rightBarButtonItem = addButton;
+    self.title = @"Activities";
+    
     // load activities array
     
     [[NetworkController sharedInstance] fetchAllEventsUsingPath:^(NSError *error, NSMutableArray *response) {
@@ -49,7 +56,10 @@
             NSLog(@"%@", error.localizedDescription);
         } else {
             _activities = response;
-            _filteredActivities  = [NSArray arrayWithArray:_activities];
+            
+            NSPredicate *upcoming = [NSPredicate predicateWithFormat:@"eventExpired == %@", [NSNumber numberWithBool:NO]];
+            NSArray *newArray = [NSArray arrayWithArray:_activities];
+            _filteredActivities = [newArray filteredArrayUsingPredicate:upcoming];
         }
     }];
     
@@ -57,9 +67,11 @@
     _tableView.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) newEventButtonPressed {
+    NSLog(@"Add button pressed");
+    NewActivityViewController *newEventVC = [self.storyboard instantiateViewControllerWithIdentifier:@"NEWEVENT_VC"];
+    [self.navigationController pushViewController:newEventVC animated:true];
+    //[self presentViewController:newEventVC animated:true completion:nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
