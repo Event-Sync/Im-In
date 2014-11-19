@@ -26,12 +26,17 @@
 }
 
 - (IBAction)signUpPressed:(id)sender {
+    
+    NSLog(@"Sign up on main menu pressed!");
     SignUpViewController *signUpVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SIGNUP_VC"];
+    //[self presentViewController:signUpVC animated:true completion:nil];
     [self.navigationController pushViewController:signUpVC animated:true];
 }
 
 
 - (IBAction)loginPressed:(id)sender {
+    
+    NSLog(@"Login on main menu pressed!");
     LoginViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LOGIN_VC"];
     [self.navigationController pushViewController:loginVC animated:true];
 }

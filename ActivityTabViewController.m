@@ -11,6 +11,7 @@
 #import "ActivityTableViewCell.h"
 #import "NetworkController.h"
 #import "NewActivityViewController.h"
+#import "ViewActivityViewController.h"
 
 @interface ActivityTabViewController () 
 
@@ -88,6 +89,9 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    ViewActivityViewController *viewEventVC = [self.storyboard instantiateViewControllerWithIdentifier:@"VIEWEVENT_VC"];
+    [self.navigationController pushViewController:viewEventVC animated:true];
     
 }
 
