@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MenuViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+//    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+//    
+//    NSString *authToken = [[NSUserDefaults standardUserDefaults] objectForKey:authToken];
+//    if (!authToken) {
+//        MenuViewController *menuVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"MENU_VC"];
+//        [self presentViewController:menuVC animated:true completion:nil];
+//    } else {
+//        // set authtoken
+//        NSLog(@"auth token set!");
+//    }
+    
     return YES;
 }
 
