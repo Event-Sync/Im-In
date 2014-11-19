@@ -22,6 +22,8 @@
 
 - (IBAction)loginPressed:(id)sender {
     
+    NSLog(@"Login Pressed!");
+    
     ActivityTabViewController *activityTabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ACTIVITYTAB_VC"];
     [self presentViewController:activityTabVC animated:true completion:nil];
     

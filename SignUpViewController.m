@@ -21,6 +21,8 @@
 
 - (IBAction)registerPressed:(id)sender {
     
+    NSLog(@"Register pressed!");
+    
      ActivityTabViewController *activityTabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ACTIVITYTAB_VC"];
     [self presentViewController:activityTabVC animated:true completion:nil];
 }

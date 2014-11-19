@@ -13,13 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *activityNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *timeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *locationTextField;
-@property (weak, nonatomic) IBOutlet UITextField *firstInviteePhoneNumber;
-@property (weak, nonatomic) IBOutlet UIButton *firstInviteeAddButton;
-@property (weak, nonatomic) IBOutlet UITextField *secondInviteePhoneNumber;
-@property (weak, nonatomic) IBOutlet UIButton *secondInviteeButton;
-@property (weak, nonatomic) IBOutlet UITextField *thirdInviteePhoneNumber;
-@property (weak, nonatomic) IBOutlet UIButton *thirdInviteeButton;
-@property (weak, nonatomic) IBOutlet UITextField *fourthInviteePhoneNumber;
-@property (weak, nonatomic) IBOutlet UIButton *fourthInviteeButton;
+@property (weak, nonatomic) IBOutlet UITextField *eventDescriptionTextField;
+
 
 @end
