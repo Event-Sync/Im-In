@@ -17,5 +17,5 @@
 - (void) fetchEventWithCompletion: (NSString *) eventId completionHandler: (void(^) (NSError *error, NSMutableArray *response)) completionHandler;
 - (void) fetchAllEventsWithCompletion: (void(^) (NSError *error, NSMutableArray *response)) completionHandler;
 - (void) createNewEventWithCompletion: (NSDictionary *) newEventDictionary completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler;
-- (void) createNewAccountWithCompletion: (NSDictionary *)  newAccountInfo completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler;
+- (void) createAccountOrLoginWithCompletion: (NSDictionary *)  newAccountInfo completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler;
 @end
