@@ -12,31 +12,30 @@
 		520DD4371A1BBED9004EBE2B /* loginConfirmation.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD4361A1BBED9004EBE2B /* loginConfirmation.json */; };
 		520DD4391A1BBEF2004EBE2B /* allactivities.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD4381A1BBEF2004EBE2B /* allactivities.json */; };
 		520DD43B1A1BBF08004EBE2B /* newActivity.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD43A1A1BBF08004EBE2B /* newActivity.json */; };
-		520DD43D1A1BDB48004EBE2B /* activity.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD43C1A1BDB48004EBE2B /* activity.json */; };
-		52BB30991A1D1351009040C4 /* AttendeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BB30971A1D1351009040C4 /* AttendeeTableViewCell.m */; };
-		52BB309A1A1D1351009040C4 /* AttendeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BB30981A1D1351009040C4 /* AttendeeTableViewCell.xib */; };
-		52BB309D1A1D1837009040C4 /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BB309C1A1D1837009040C4 /* Attendee.m */; };
-		52BB30A21A1D678E009040C4 /* InviteeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BB30A01A1D678E009040C4 /* InviteeTableViewCell.m */; };
-		52BB30A31A1D678E009040C4 /* InviteeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BB30A11A1D678E009040C4 /* InviteeTableViewCell.xib */; };
+		5294BF3D1A1E7C3900E9EA2D /* activity.json in Resources */ = {isa = PBXBuildFile; fileRef = 5294BF381A1E7C3900E9EA2D /* activity.json */; };
+		5294BF3E1A1E7C3900E9EA2D /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF391A1E7C3900E9EA2D /* Activity.m */; };
+		5294BF3F1A1E7C3900E9EA2D /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF3B1A1E7C3900E9EA2D /* Attendee.m */; };
+		5294BF401A1E7C3900E9EA2D /* getAllEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5294BF3C1A1E7C3900E9EA2D /* getAllEvents.json */; };
+		5294BF511A1E7C7400E9EA2D /* ActivityTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF421A1E7C7400E9EA2D /* ActivityTabViewController.m */; };
+		5294BF521A1E7C7400E9EA2D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF441A1E7C7400E9EA2D /* LoginViewController.m */; };
+		5294BF531A1E7C7400E9EA2D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF461A1E7C7400E9EA2D /* MenuViewController.m */; };
+		5294BF541A1E7C7400E9EA2D /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF481A1E7C7400E9EA2D /* NetworkController.m */; };
+		5294BF551A1E7C7400E9EA2D /* NewActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF4A1A1E7C7400E9EA2D /* NewActivityViewController.m */; };
+		5294BF561A1E7C7400E9EA2D /* ProfileTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF4C1A1E7C7400E9EA2D /* ProfileTabViewController.m */; };
+		5294BF571A1E7C7400E9EA2D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF4E1A1E7C7400E9EA2D /* SignUpViewController.m */; };
+		5294BF581A1E7C7400E9EA2D /* ViewActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF501A1E7C7400E9EA2D /* ViewActivityViewController.m */; };
+		5294BF621A1E7C9200E9EA2D /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF5A1A1E7C9200E9EA2D /* ActivityTableViewCell.m */; };
+		5294BF631A1E7C9200E9EA2D /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5294BF5B1A1E7C9200E9EA2D /* ActivityTableViewCell.xib */; };
+		5294BF641A1E7C9200E9EA2D /* AttendeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF5D1A1E7C9200E9EA2D /* AttendeeTableViewCell.m */; };
+		5294BF651A1E7C9200E9EA2D /* AttendeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5294BF5E1A1E7C9200E9EA2D /* AttendeeTableViewCell.xib */; };
 		52FFCCB51A1A795F00745607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB41A1A795F00745607 /* main.m */; };
 		52FFCCB81A1A795F00745607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB71A1A795F00745607 /* AppDelegate.m */; };
 		52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCBF1A1A795F00745607 /* Main.storyboard */; };
 		52FFCCC31A1A795F00745607 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCC21A1A795F00745607 /* Images.xcassets */; };
 		52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCC41A1A795F00745607 /* LaunchScreen.xib */; };
 		52FFCCD21A1A795F00745607 /* I_m_InTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCD11A1A795F00745607 /* I_m_InTests.m */; };
-		52FFCCE31A1A978300745607 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCE21A1A978300745607 /* NetworkController.m */; };
-		52FFCCE71A1AA8FE00745607 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCE51A1AA8FE00745607 /* ActivityTableViewCell.m */; };
-		52FFCCE81A1AA8FE00745607 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCE61A1AA8FE00745607 /* ActivityTableViewCell.xib */; };
 		52FFCCEC1A1AAE1000745607 /* activity.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCEB1A1AAE1000745607 /* activity.jpeg */; };
-		52FFCCEF1A1AAEEA00745607 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCEE1A1AAEEA00745607 /* Activity.m */; };
-		D519DF131A1A7F980076EE0E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF121A1A7F980076EE0E /* MenuViewController.m */; };
 		D519DF4E1A1A88CA0076EE0E /* concert.png in Resources */ = {isa = PBXBuildFile; fileRef = D519DF4D1A1A88CA0076EE0E /* concert.png */; };
-		D519DF511A1A90500076EE0E /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF501A1A90500076EE0E /* SignUpViewController.m */; };
-		D519DF541A1A90610076EE0E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF531A1A90610076EE0E /* LoginViewController.m */; };
-		D519DF571A1A908E0076EE0E /* ActivityTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF561A1A908E0076EE0E /* ActivityTabViewController.m */; };
-		D519DF5A1A1A909D0076EE0E /* ProfileTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF591A1A909D0076EE0E /* ProfileTabViewController.m */; };
-		D519DF5D1A1A90B10076EE0E /* NewActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF5C1A1A90B10076EE0E /* NewActivityViewController.m */; };
-		D519DF601A1A90C30076EE0E /* ViewActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF5F1A1A90C30076EE0E /* ViewActivityViewController.m */; };
 		D58655F31A1D068800736DFC /* waterPeople.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D58655F21A1D068800736DFC /* waterPeople.jpeg */; };
 /* End PBXBuildFile section */
 
@@ -56,15 +55,35 @@
 		520DD4361A1BBED9004EBE2B /* loginConfirmation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = loginConfirmation.json; path = "I'm In/loginConfirmation.json"; sourceTree = "<group>"; };
 		520DD4381A1BBEF2004EBE2B /* allactivities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = allactivities.json; path = "I'm In/allactivities.json"; sourceTree = "<group>"; };
 		520DD43A1A1BBF08004EBE2B /* newActivity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = newActivity.json; path = "I'm In/newActivity.json"; sourceTree = "<group>"; };
-		520DD43C1A1BDB48004EBE2B /* activity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activity.json; sourceTree = "<group>"; };
-		52BB30961A1D1351009040C4 /* AttendeeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendeeTableViewCell.h; sourceTree = "<group>"; };
-		52BB30971A1D1351009040C4 /* AttendeeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendeeTableViewCell.m; sourceTree = "<group>"; };
-		52BB30981A1D1351009040C4 /* AttendeeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendeeTableViewCell.xib; sourceTree = "<group>"; };
-		52BB309B1A1D1837009040C4 /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attendee.h; sourceTree = "<group>"; };
-		52BB309C1A1D1837009040C4 /* Attendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attendee.m; sourceTree = "<group>"; };
-		52BB309F1A1D678E009040C4 /* InviteeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteeTableViewCell.h; sourceTree = "<group>"; };
-		52BB30A01A1D678E009040C4 /* InviteeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteeTableViewCell.m; sourceTree = "<group>"; };
-		52BB30A11A1D678E009040C4 /* InviteeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InviteeTableViewCell.xib; sourceTree = "<group>"; };
+		5294BF361A1E7C0B00E9EA2D /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = "I'm In/Constant.h"; sourceTree = "<group>"; };
+		5294BF371A1E7C3900E9EA2D /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = "I'm In/Activity.h"; sourceTree = "<group>"; };
+		5294BF381A1E7C3900E9EA2D /* activity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = activity.json; path = "I'm In/activity.json"; sourceTree = "<group>"; };
+		5294BF391A1E7C3900E9EA2D /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = "I'm In/Activity.m"; sourceTree = "<group>"; };
+		5294BF3A1A1E7C3900E9EA2D /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attendee.h; path = "I'm In/Attendee.h"; sourceTree = "<group>"; };
+		5294BF3B1A1E7C3900E9EA2D /* Attendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Attendee.m; path = "I'm In/Attendee.m"; sourceTree = "<group>"; };
+		5294BF3C1A1E7C3900E9EA2D /* getAllEvents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = getAllEvents.json; path = "I'm In/getAllEvents.json"; sourceTree = "<group>"; };
+		5294BF411A1E7C7400E9EA2D /* ActivityTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityTabViewController.h; path = "I'm In/ActivityTabViewController.h"; sourceTree = "<group>"; };
+		5294BF421A1E7C7400E9EA2D /* ActivityTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityTabViewController.m; path = "I'm In/ActivityTabViewController.m"; sourceTree = "<group>"; };
+		5294BF431A1E7C7400E9EA2D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = "I'm In/LoginViewController.h"; sourceTree = "<group>"; };
+		5294BF441A1E7C7400E9EA2D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = "I'm In/LoginViewController.m"; sourceTree = "<group>"; };
+		5294BF451A1E7C7400E9EA2D /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = "I'm In/MenuViewController.h"; sourceTree = "<group>"; };
+		5294BF461A1E7C7400E9EA2D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = "I'm In/MenuViewController.m"; sourceTree = "<group>"; };
+		5294BF471A1E7C7400E9EA2D /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkController.h; path = "I'm In/NetworkController.h"; sourceTree = "<group>"; };
+		5294BF481A1E7C7400E9EA2D /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkController.m; path = "I'm In/NetworkController.m"; sourceTree = "<group>"; };
+		5294BF491A1E7C7400E9EA2D /* NewActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewActivityViewController.h; path = "I'm In/NewActivityViewController.h"; sourceTree = "<group>"; };
+		5294BF4A1A1E7C7400E9EA2D /* NewActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewActivityViewController.m; path = "I'm In/NewActivityViewController.m"; sourceTree = "<group>"; };
+		5294BF4B1A1E7C7400E9EA2D /* ProfileTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTabViewController.h; path = "I'm In/ProfileTabViewController.h"; sourceTree = "<group>"; };
+		5294BF4C1A1E7C7400E9EA2D /* ProfileTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTabViewController.m; path = "I'm In/ProfileTabViewController.m"; sourceTree = "<group>"; };
+		5294BF4D1A1E7C7400E9EA2D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewController.h; path = "I'm In/SignUpViewController.h"; sourceTree = "<group>"; };
+		5294BF4E1A1E7C7400E9EA2D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = "I'm In/SignUpViewController.m"; sourceTree = "<group>"; };
+		5294BF4F1A1E7C7400E9EA2D /* ViewActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewActivityViewController.h; path = "I'm In/ViewActivityViewController.h"; sourceTree = "<group>"; };
+		5294BF501A1E7C7400E9EA2D /* ViewActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewActivityViewController.m; path = "I'm In/ViewActivityViewController.m"; sourceTree = "<group>"; };
+		5294BF591A1E7C9200E9EA2D /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityTableViewCell.h; path = "I'm In/ActivityTableViewCell.h"; sourceTree = "<group>"; };
+		5294BF5A1A1E7C9200E9EA2D /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityTableViewCell.m; path = "I'm In/ActivityTableViewCell.m"; sourceTree = "<group>"; };
+		5294BF5B1A1E7C9200E9EA2D /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivityTableViewCell.xib; path = "I'm In/ActivityTableViewCell.xib"; sourceTree = "<group>"; };
+		5294BF5C1A1E7C9200E9EA2D /* AttendeeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendeeTableViewCell.h; path = "I'm In/AttendeeTableViewCell.h"; sourceTree = "<group>"; };
+		5294BF5D1A1E7C9200E9EA2D /* AttendeeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendeeTableViewCell.m; path = "I'm In/AttendeeTableViewCell.m"; sourceTree = "<group>"; };
+		5294BF5E1A1E7C9200E9EA2D /* AttendeeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AttendeeTableViewCell.xib; path = "I'm In/AttendeeTableViewCell.xib"; sourceTree = "<group>"; };
 		52FFCCAF1A1A795F00745607 /* I'm In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I'm In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFCCB31A1A795F00745607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FFCCB41A1A795F00745607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,30 +95,8 @@
 		52FFCCCB1A1A795F00745607 /* I'm InTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "I'm InTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFCCD01A1A795F00745607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FFCCD11A1A795F00745607 /* I_m_InTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = I_m_InTests.m; sourceTree = "<group>"; };
-		52FFCCE11A1A978300745607 /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
-		52FFCCE21A1A978300745607 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
-		52FFCCE41A1AA8FE00745607 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
-		52FFCCE51A1AA8FE00745607 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
-		52FFCCE61A1AA8FE00745607 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		52FFCCEB1A1AAE1000745607 /* activity.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = activity.jpeg; sourceTree = "<group>"; };
-		52FFCCED1A1AAEEA00745607 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
-		52FFCCEE1A1AAEEA00745607 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
-		52FFCCF31A1ACB3100745607 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
-		D519DF111A1A7F980076EE0E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		D519DF121A1A7F980076EE0E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		D519DF4D1A1A88CA0076EE0E /* concert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = concert.png; sourceTree = "<group>"; };
-		D519DF4F1A1A90500076EE0E /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
-		D519DF501A1A90500076EE0E /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		D519DF521A1A90610076EE0E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		D519DF531A1A90610076EE0E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		D519DF551A1A908E0076EE0E /* ActivityTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTabViewController.h; sourceTree = "<group>"; };
-		D519DF561A1A908E0076EE0E /* ActivityTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTabViewController.m; sourceTree = "<group>"; };
-		D519DF581A1A909D0076EE0E /* ProfileTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTabViewController.h; sourceTree = "<group>"; };
-		D519DF591A1A909D0076EE0E /* ProfileTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTabViewController.m; sourceTree = "<group>"; };
-		D519DF5B1A1A90B10076EE0E /* NewActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewActivityViewController.h; sourceTree = "<group>"; };
-		D519DF5C1A1A90B10076EE0E /* NewActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewActivityViewController.m; sourceTree = "<group>"; };
-		D519DF5E1A1A90C30076EE0E /* ViewActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewActivityViewController.h; sourceTree = "<group>"; };
-		D519DF5F1A1A90C30076EE0E /* ViewActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewActivityViewController.m; sourceTree = "<group>"; };
 		D58655F21A1D068800736DFC /* waterPeople.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waterPeople.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,22 +180,22 @@
 		D519DF0E1A1A7F370076EE0E /* Controller Layer */ = {
 			isa = PBXGroup;
 			children = (
-				52FFCCE11A1A978300745607 /* NetworkController.h */,
-				52FFCCE21A1A978300745607 /* NetworkController.m */,
-				D519DF111A1A7F980076EE0E /* MenuViewController.h */,
-				D519DF121A1A7F980076EE0E /* MenuViewController.m */,
-				D519DF4F1A1A90500076EE0E /* SignUpViewController.h */,
-				D519DF501A1A90500076EE0E /* SignUpViewController.m */,
-				D519DF521A1A90610076EE0E /* LoginViewController.h */,
-				D519DF531A1A90610076EE0E /* LoginViewController.m */,
-				D519DF551A1A908E0076EE0E /* ActivityTabViewController.h */,
-				D519DF561A1A908E0076EE0E /* ActivityTabViewController.m */,
-				D519DF581A1A909D0076EE0E /* ProfileTabViewController.h */,
-				D519DF591A1A909D0076EE0E /* ProfileTabViewController.m */,
-				D519DF5B1A1A90B10076EE0E /* NewActivityViewController.h */,
-				D519DF5C1A1A90B10076EE0E /* NewActivityViewController.m */,
-				D519DF5E1A1A90C30076EE0E /* ViewActivityViewController.h */,
-				D519DF5F1A1A90C30076EE0E /* ViewActivityViewController.m */,
+				5294BF471A1E7C7400E9EA2D /* NetworkController.h */,
+				5294BF481A1E7C7400E9EA2D /* NetworkController.m */,
+				5294BF411A1E7C7400E9EA2D /* ActivityTabViewController.h */,
+				5294BF421A1E7C7400E9EA2D /* ActivityTabViewController.m */,
+				5294BF431A1E7C7400E9EA2D /* LoginViewController.h */,
+				5294BF441A1E7C7400E9EA2D /* LoginViewController.m */,
+				5294BF451A1E7C7400E9EA2D /* MenuViewController.h */,
+				5294BF461A1E7C7400E9EA2D /* MenuViewController.m */,
+				5294BF491A1E7C7400E9EA2D /* NewActivityViewController.h */,
+				5294BF4A1A1E7C7400E9EA2D /* NewActivityViewController.m */,
+				5294BF4B1A1E7C7400E9EA2D /* ProfileTabViewController.h */,
+				5294BF4C1A1E7C7400E9EA2D /* ProfileTabViewController.m */,
+				5294BF4D1A1E7C7400E9EA2D /* SignUpViewController.h */,
+				5294BF4E1A1E7C7400E9EA2D /* SignUpViewController.m */,
+				5294BF4F1A1E7C7400E9EA2D /* ViewActivityViewController.h */,
+				5294BF501A1E7C7400E9EA2D /* ViewActivityViewController.m */,
 			);
 			name = "Controller Layer";
 			path = ..;
@@ -207,19 +204,20 @@
 		D519DF0F1A1A7F420076EE0E /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
-				52FFCCF31A1ACB3100745607 /* Constant.h */,
-				520DD43C1A1BDB48004EBE2B /* activity.json */,
+				5294BF361A1E7C0B00E9EA2D /* Constant.h */,
+				5294BF371A1E7C3900E9EA2D /* Activity.h */,
+				5294BF391A1E7C3900E9EA2D /* Activity.m */,
+				5294BF3A1A1E7C3900E9EA2D /* Attendee.h */,
+				5294BF3B1A1E7C3900E9EA2D /* Attendee.m */,
+				52FFCCB61A1A795F00745607 /* AppDelegate.h */,
+				52FFCCB71A1A795F00745607 /* AppDelegate.m */,
+				5294BF3C1A1E7C3900E9EA2D /* getAllEvents.json */,
 				520DD4321A1BBE4F004EBE2B /* signup.json */,
 				520DD4341A1BBE66004EBE2B /* login.json */,
 				520DD4361A1BBED9004EBE2B /* loginConfirmation.json */,
 				520DD4381A1BBEF2004EBE2B /* allactivities.json */,
+				5294BF381A1E7C3900E9EA2D /* activity.json */,
 				520DD43A1A1BBF08004EBE2B /* newActivity.json */,
-				52FFCCB61A1A795F00745607 /* AppDelegate.h */,
-				52FFCCB71A1A795F00745607 /* AppDelegate.m */,
-				52FFCCED1A1AAEEA00745607 /* Activity.h */,
-				52FFCCEE1A1AAEEA00745607 /* Activity.m */,
-				52BB309B1A1D1837009040C4 /* Attendee.h */,
-				52BB309C1A1D1837009040C4 /* Attendee.m */,
 			);
 			name = "Model Layer";
 			path = ..;
@@ -228,17 +226,14 @@
 		D519DF101A1A7F480076EE0E /* View Layer */ = {
 			isa = PBXGroup;
 			children = (
+				5294BF591A1E7C9200E9EA2D /* ActivityTableViewCell.h */,
+				5294BF5A1A1E7C9200E9EA2D /* ActivityTableViewCell.m */,
+				5294BF5B1A1E7C9200E9EA2D /* ActivityTableViewCell.xib */,
+				5294BF5C1A1E7C9200E9EA2D /* AttendeeTableViewCell.h */,
+				5294BF5D1A1E7C9200E9EA2D /* AttendeeTableViewCell.m */,
+				5294BF5E1A1E7C9200E9EA2D /* AttendeeTableViewCell.xib */,
 				52FFCCBF1A1A795F00745607 /* Main.storyboard */,
-				52FFCCE41A1AA8FE00745607 /* ActivityTableViewCell.h */,
-				52FFCCE51A1AA8FE00745607 /* ActivityTableViewCell.m */,
-				52FFCCE61A1AA8FE00745607 /* ActivityTableViewCell.xib */,
 				52FFCCC41A1A795F00745607 /* LaunchScreen.xib */,
-				52BB309F1A1D678E009040C4 /* InviteeTableViewCell.h */,
-				52BB30A01A1D678E009040C4 /* InviteeTableViewCell.m */,
-				52BB30A11A1D678E009040C4 /* InviteeTableViewCell.xib */,
-				52BB30961A1D1351009040C4 /* AttendeeTableViewCell.h */,
-				52BB30971A1D1351009040C4 /* AttendeeTableViewCell.m */,
-				52BB30981A1D1351009040C4 /* AttendeeTableViewCell.xib */,
 			);
 			name = "View Layer";
 			path = ..;
@@ -326,17 +321,17 @@
 			files = (
 				520DD4371A1BBED9004EBE2B /* loginConfirmation.json in Resources */,
 				52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */,
+				5294BF3D1A1E7C3900E9EA2D /* activity.json in Resources */,
 				52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */,
 				520DD43B1A1BBF08004EBE2B /* newActivity.json in Resources */,
-				52BB30A31A1D678E009040C4 /* InviteeTableViewCell.xib in Resources */,
 				D58655F31A1D068800736DFC /* waterPeople.jpeg in Resources */,
-				52FFCCE81A1AA8FE00745607 /* ActivityTableViewCell.xib in Resources */,
 				520DD4331A1BBE4F004EBE2B /* signup.json in Resources */,
+				5294BF401A1E7C3900E9EA2D /* getAllEvents.json in Resources */,
+				5294BF631A1E7C9200E9EA2D /* ActivityTableViewCell.xib in Resources */,
 				52FFCCEC1A1AAE1000745607 /* activity.jpeg in Resources */,
-				520DD43D1A1BDB48004EBE2B /* activity.json in Resources */,
 				520DD4351A1BBE66004EBE2B /* login.json in Resources */,
+				5294BF651A1E7C9200E9EA2D /* AttendeeTableViewCell.xib in Resources */,
 				52FFCCC31A1A795F00745607 /* Images.xcassets in Resources */,
-				52BB309A1A1D1351009040C4 /* AttendeeTableViewCell.xib in Resources */,
 				520DD4391A1BBEF2004EBE2B /* allactivities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,21 +351,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FFCCE71A1AA8FE00745607 /* ActivityTableViewCell.m in Sources */,
-				52BB309D1A1D1837009040C4 /* Attendee.m in Sources */,
-				52BB30A21A1D678E009040C4 /* InviteeTableViewCell.m in Sources */,
-				D519DF601A1A90C30076EE0E /* ViewActivityViewController.m in Sources */,
+				5294BF531A1E7C7400E9EA2D /* MenuViewController.m in Sources */,
+				5294BF621A1E7C9200E9EA2D /* ActivityTableViewCell.m in Sources */,
+				5294BF581A1E7C7400E9EA2D /* ViewActivityViewController.m in Sources */,
+				5294BF3E1A1E7C3900E9EA2D /* Activity.m in Sources */,
 				52FFCCB81A1A795F00745607 /* AppDelegate.m in Sources */,
-				D519DF571A1A908E0076EE0E /* ActivityTabViewController.m in Sources */,
-				D519DF131A1A7F980076EE0E /* MenuViewController.m in Sources */,
-				52FFCCE31A1A978300745607 /* NetworkController.m in Sources */,
-				D519DF511A1A90500076EE0E /* SignUpViewController.m in Sources */,
-				D519DF5D1A1A90B10076EE0E /* NewActivityViewController.m in Sources */,
+				5294BF521A1E7C7400E9EA2D /* LoginViewController.m in Sources */,
+				5294BF3F1A1E7C3900E9EA2D /* Attendee.m in Sources */,
+				5294BF511A1E7C7400E9EA2D /* ActivityTabViewController.m in Sources */,
 				52FFCCB51A1A795F00745607 /* main.m in Sources */,
-				52BB30991A1D1351009040C4 /* AttendeeTableViewCell.m in Sources */,
-				D519DF541A1A90610076EE0E /* LoginViewController.m in Sources */,
-				52FFCCEF1A1AAEEA00745607 /* Activity.m in Sources */,
-				D519DF5A1A1A909D0076EE0E /* ProfileTabViewController.m in Sources */,
+				5294BF551A1E7C7400E9EA2D /* NewActivityViewController.m in Sources */,
+				5294BF541A1E7C7400E9EA2D /* NetworkController.m in Sources */,
+				5294BF571A1E7C7400E9EA2D /* SignUpViewController.m in Sources */,
+				5294BF641A1E7C9200E9EA2D /* AttendeeTableViewCell.m in Sources */,
+				5294BF561A1E7C7400E9EA2D /* ProfileTabViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

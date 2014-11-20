@@ -1,37 +1,39 @@
 //
-//  LoginViewController.m
+//  SignUpViewController.m
 //  I'm In
 //
 //  Created by Matthew Brightbill on 11/17/14.
 //  Copyright (c) 2014 Code Fellows. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "SignUpViewController.h"
 #import "ActivityTabViewController.h"
 #import "NetworkController.h"
 
-@interface LoginViewController ()
+@interface SignUpViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation SignUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.title = @"Login";
+    
+    self.title = @"Sign Up";
 }
 
-- (IBAction)loginPressed:(id)sender {
+- (IBAction)registerPressed:(id)sender {
     
-    NSLog(@"Login Pressed!");
+    NSLog(@"Register pressed!");
     
-    NSDictionary *loginDict = @{
+    NSDictionary *newAccountDict = @{
+         @"name" : self.nameTextField.text,
          @"phone_number" : self.phoneNumberTextField.text,
          @"password" : self.passwordTextField.text
     };
     
-    [[NetworkController sharedInstance] createAccountOrLoginWithCompletion:loginDict completionHandler:^(NSError *error, BOOL response) {
+    
+    [[NetworkController sharedInstance] createAccountWithCompletion:newAccountDict completionHandler:^(NSError *error, BOOL response) {
         
         if (error != nil) {
             NSLog(@"%@", error.localizedDescription);
@@ -43,7 +45,10 @@
         }
     }];
     
+    
 }
+
+
 
 
 

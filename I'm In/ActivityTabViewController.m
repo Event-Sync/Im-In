@@ -42,43 +42,44 @@
     [_tableView reloadData];
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newEventButtonPressed)];
-    
-    self.navigationItem.rightBarButtonItem = addButton;
-    self.title = @"Activities";
-    
-    // load activities array
-    
-    [[NetworkController sharedInstance] fetchAllEventsUsingPath:^(NSError *error, NSMutableArray *response) {
-        if (error != nil) {
-            NSLog(@"%@", error.localizedDescription);
-        } else {
-            _activities = response;
-            
-            NSPredicate *upcoming = [NSPredicate predicateWithFormat:@"eventExpired == %@", [NSNumber numberWithBool:NO]];
-            NSArray *newArray = [NSArray arrayWithArray:_activities];
-            _filteredActivities = [newArray filteredArrayUsingPredicate:upcoming];
-        }
-    }];
-    
-    _tableView.dataSource = self;
-    _tableView.delegate = self;
-}
-
-- (void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
     NSString *authToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
     if (!authToken) {
         MenuViewController *menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MENU_VC"];
         [self presentViewController:menuVC animated:0 completion:nil];
+    } else {
         
+        UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newEventButtonPressed)];
+        
+        self.navigationItem.rightBarButtonItem = addButton;
+        self.title = @"Activities";
+        
+        
+        NSDictionary *eventDictionary = @{
+                                          @"jwt" : [[NetworkController sharedInstance] authToken]
+                                          };
+        
+        [[NetworkController sharedInstance] fetchAllEventsWithCompletion: eventDictionary completionHandler: ^(NSError *error, NSMutableArray *response) {
+            if (error != nil) {
+                NSLog(@"%@", error.localizedDescription);
+            } else {
+                _activities = response;
+                
+                NSPredicate *upcoming = [NSPredicate predicateWithFormat:@"eventExpired == %@", [NSNumber numberWithBool:NO]];
+                NSArray *newArray = [NSArray arrayWithArray:_activities];
+                _filteredActivities = [newArray filteredArrayUsingPredicate:upcoming];
+            }
+        }];
+        
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
     }
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
 }
 
 - (void) newEventButtonPressed {
@@ -96,7 +97,7 @@
     ActivityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL" forIndexPath:indexPath];
     
     Activity *newActivity = _filteredActivities[indexPath.row];
-    cell.textLabel.text = newActivity.eventDescription;
+    cell.textLabel.text = newActivity.eventName;
     
     return cell;
 }

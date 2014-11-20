@@ -31,35 +31,38 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"AttendeeTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"CELL"];
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-//    self.tableView.estimatedRowHeight = 30;
+    self.tableView.estimatedRowHeight = 40;
     
-    [[NetworkController sharedInstance] fetchSingleEventUsingPath:@"" completionHandler:^(NSError *error, Activity *response) {
-        if (error != nil) {
-            NSLog(@"%@", error.localizedDescription);
-        } else {
-            if (response != nil) {
-                _activity = response;
-                
-                _eventNameLabel.text = _activity.eventName;
-                _timeLabel.text = _activity.eventTime;
-                _locationLabel.text = _activity.eventLocation;
-                if (_activity.eventExpired) {
-                    _eventStatusLabel.text = @"Expired";
-                } else {
-                    _eventStatusLabel.text = @"Active";
+//    [[NetworkController sharedInstance] fetchSingleEventUsingPath:@"" completionHandler:^(NSError *error, Activity *response) {
+    if (_activity != nil) {
+        [[NetworkController sharedInstance] fetchEventWithCompletion:_activity.eventId completionHandler: ^(NSError *error, Activity *response) {
+            if (error != nil) {
+                NSLog(@"%@", error.localizedDescription);
+            } else {
+                if (response != nil) {
+                    _activity = response;
+                    
+                    _eventNameLabel.text = _activity.eventName;
+                    _timeLabel.text = _activity.eventTime;
+                    _locationLabel.text = _activity.eventLocation;
+                    if (_activity.eventExpired) {
+                        _eventStatusLabel.text = @"Expired";
+                    } else {
+                        _eventStatusLabel.text = @"Active";
+                    }
+                    
+                    _attendees = _activity.attendees;
                 }
-                
-                _attendees = _activity.attendees;
             }
-        }
-    }];
-    
-    _tableView.dataSource = self;
-    _tableView.delegate = self;
-    
+        }];
+        
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     AttendeeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL" forIndexPath:indexPath];
     
 //    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
