@@ -12,6 +12,8 @@
 #import "NetworkController.h"
 #import "NewActivityViewController.h"
 #import "ViewActivityViewController.h"
+#import "MenuViewController.h"
+
 
 @interface ActivityTabViewController () 
 
@@ -66,6 +68,17 @@
     
     _tableView.dataSource = self;
     _tableView.delegate = self;
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSString *authToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
+    if (!authToken) {
+        MenuViewController *menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MENU_VC"];
+        [self presentViewController:menuVC animated:0 completion:nil];
+        
+    }
 }
 
 - (void) newEventButtonPressed {

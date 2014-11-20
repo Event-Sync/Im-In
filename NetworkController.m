@@ -28,12 +28,12 @@
 }
 
 - (id) init {
-//    _configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
-//    _session = [NSURLSession sessionWithConfiguration:_configuration];
+    //    _configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+    //    _session = [NSURLSession sessionWithConfiguration:_configuration];
     
     [self setConfiguration: [NSURLSessionConfiguration defaultSessionConfiguration]];
     [self setSession: [NSURLSession sessionWithConfiguration: _configuration]];return self;
-//    [self setAuthToken: @"Test"];
+    //    [self setAuthToken: @"Test"];
 }
 
 - (void) dealloc {
@@ -100,7 +100,7 @@
 - (void) fetchAllEventsWithCompletion: (void(^) (NSError *error, NSMutableArray *response)) completionHandler {
     
     NSString *urlString = [NSString stringWithFormat: @"%@%@",kAPI, @"Event/"];
-
+    
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     
     NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -120,14 +120,14 @@
                 }];
             }
         }
-     }];
+    }];
     [dataTask resume];
 }
 
 - (void) createNewEventWithCompletion: (NSDictionary *) newEventDictionary completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler  {
     
     NSString *urlString = [NSString stringWithFormat: @"%@%@",kAPI, @"newEvent"];
-
+    
     NSURL *url = [NSURL URLWithString:urlString];
     
     NSDictionary *postDict = [NSDictionary dictionaryWithObjectsAndKeys:@"user", @"username",
@@ -157,7 +157,7 @@
         if (response != nil) {
             if ([response isKindOfClass: [NSHTTPURLResponse class]]) {
                 NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-            
+                
                 if (httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299) {
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                         completionHandler (nil, YES);
@@ -168,29 +168,26 @@
                     }];
                 }
             }
-                
+            
         }
-
+        
     }];
     [dataTask resume];
-
+    
 }
 
 - (void) createNewAccountWithCompletion: (NSDictionary *)  newAccountInfo completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler {
     
-    NSString *urlString = [NSString stringWithFormat: @"%@%@",kAPI, @"newAccount"];
+    NSString *urlString = [NSString stringWithFormat: @"%@%@", @"https://iamin.herokuapp.com/", @"login/newUser"];
     NSURL *url = [NSURL URLWithString:urlString];
     
-    NSDictionary *postDict = [NSDictionary dictionaryWithObjectsAndKeys:@"name", @"phone_number",
-                              @"password", nil];
-    
-    NSData *postData = [self encodeDictionary:postDict];
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:newAccountInfo options:0 error:nil];
     
     // Create the request
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"POST"];
     [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)postData.length] forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/x-www-form-urlencoded charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
     
     NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -210,10 +207,25 @@
                 NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                 
                 if (httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299) {
+                    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                    NSLog(@"%@", responseString);
+                    
+                    
+                    NSDictionary *searchJSONDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+                    
+                    if (searchJSONDictionary != nil) {
+                        NSString *authToken = searchJSONDictionary[@"jwt"];
+                        
+                        [[NSUserDefaults standardUserDefaults] setObject:authToken forKey:kAuthToken];
+                    }
+                    
+                    
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                         completionHandler (nil, YES);
                     }];
                 } else {
+                    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                    NSLog(@"%@", responseString);
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                         completionHandler (error, NO);
                     }];
