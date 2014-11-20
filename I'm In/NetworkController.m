@@ -28,42 +28,19 @@
 }
 
 - (id) init {
-    //    _configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
-    //    _session = [NSURLSession sessionWithConfiguration:_configuration];
     self = [super init];
     
     if (self) {
-        [self setConfiguration: [NSURLSessionConfiguration defaultSessionConfiguration]];
-        [self setSession: [NSURLSession sessionWithConfiguration: _configuration]];
+        if (_authToken == nil) {
+            _authToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
+        }
     }
     return self;
-    //    [self setAuthToken: @"Test"];
 }
 
 - (void) dealloc {
     
 }
-
-//
-//https://iamin.herokuapp.com/Event/_123123
-//.post(/api/newEvent)-to make new event -  Sam
-//.get('/api/Event/_id')-to retrieve an event
-//.delete('/api/Event/delete/_id')-to delete event - Matt
-//.put('/api/Event/_id')-to update event
-//.get('/api/Event/)-retrieve all events - Sam
-//
-//NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-//NSString *path = [bundle pathForResource:@"questions" ofType:@"json"];
-//XCTAssertNotNil(path, @"fail to locate questions.json file");
-//
-//NSData *jsonData = [NSData dataWithContentsOfFile:path];
-//XCTAssertNotNil(jsonData, @"fail to load JSON file");
-//
-//NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
-//XCTAssertNotNil(jsonDict, @"jsonData is nil");
-//
-//NSArray *jsonArray = jsonDict[@"items"];
-//XCTAssertTrue([jsonArray isKindOfClass:[NSArray class]], @"JSON file is not an array class");
 
 - (void) fetchSingleEventUsingPath: (NSString *) eventId completionHandler: (void(^) (NSError *error, Activity *response)) completionHandler {
     NSString *pathToJSON = [[NSBundle mainBundle] pathForResource:@"activity" ofType:@"json"];
@@ -111,28 +88,65 @@
     [dataTask resume];
 }
 
-- (void) fetchAllEventsWithCompletion: (void(^) (NSError *error, NSMutableArray *response)) completionHandler {
+- (void) fetchAllEventsWithCompletion: (NSDictionary *) eventDictionary completionHandler: (void(^) (NSError *error, NSMutableArray *response)) completionHandler {
     
-    NSString *urlString = [NSString stringWithFormat: @"%@%@",kAPI, @"Event/"];
+//    NSString *urlString = [NSString stringWithFormat: @"%@%@",kAPI, kAPIgetAllEventsPath];
+//    //https://iamin.herokuapp.com/v1/api/
     
+    
+    NSString *urlString = [NSString stringWithFormat: @"%@%@/jwt=%@",kAPI, kAPIgetAllEventsPath, _authToken];
+
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     
-    NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSLog(@"%@", url);
+    
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:eventDictionary options:0 error:nil];
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"GET"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)postData.length] forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
         if (error != nil) {
-            NSLog(@"%@", error.localizedDescription);
-        } else {
-            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-            NSInteger statusCode = httpResponse.statusCode;
-            
-            if (statusCode >= 200 && statusCode <= 299) {
-                // need to declare a activity mutable array
-                NSMutableArray *activities = [Activity parseJSONDataIntoActivities:data];
-                
-                // return to main queue
-                [[NSOperationQueue mainQueue] addOperationWithBlock: ^{
-                    completionHandler(nil, activities);
-                }];
+            if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
+                NSLog(@"HTTP Error: %ld %@", (long)httpResponse.statusCode, error);
+            } else {
+                NSLog(@"Error %@", error.localizedDescription);
             }
+ 
+        } else {
+            
+            if (response != nil) {
+                if ([response isKindOfClass: [NSHTTPURLResponse class]]) {
+                    
+                    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                    NSInteger statusCode = httpResponse.statusCode;
+                    
+                    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                    NSLog(@"%@", responseString);
+                    
+                    if (statusCode >= 200 && statusCode <= 299) {
+                        // need to declare a activity mutable array
+                        NSMutableArray *activities = [Activity parseJSONDataIntoActivities:data];
+                        
+                        // return to main queue
+                        [[NSOperationQueue mainQueue] addOperationWithBlock: ^{
+                            completionHandler(nil, activities);
+                        }];
+                    } else {
+                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                            completionHandler (error, nil);
+                        }];
+                    }
+                }
+                
+            }
+            
+
         }
     }];
     [dataTask resume];
@@ -140,7 +154,7 @@
 
 - (void) createNewEventWithCompletion: (NSDictionary *) newEventDictionary completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler  {
     
-    NSString *urlString = [NSString stringWithFormat: @"%@%@", kAPI, @"newEvent"];
+    NSString *urlString = [NSString stringWithFormat: @"%@%@", kAPI, kAPInewEventPath];
     
     NSURL *url = [NSURL URLWithString:urlString];
     
@@ -153,7 +167,7 @@
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
     
-    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSURLSessionDataTask *dataTask = [_session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         if (error != nil) {
             if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
@@ -161,7 +175,7 @@
                 NSLog(@"HTTP Error: %ld %@", (long)httpResponse.statusCode, error);
                 return;
             }
-            NSLog(@"Error %@", error);
+            NSLog(@"Error %@", error.localizedDescription);
             return;
         }
         
@@ -201,7 +215,7 @@
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
     
-    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSURLSessionDataTask *dataTask = [_session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         if (error != nil) {
             if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
@@ -217,11 +231,10 @@
             if ([response isKindOfClass: [NSHTTPURLResponse class]]) {
                 NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                 
+                NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                NSLog(@"%@", responseString);
+                
                 if (httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299) {
-                    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                    NSLog(@"%@", responseString);
-                    
-                    
                     NSDictionary *searchJSONDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
                     
                     if (searchJSONDictionary != nil) {
@@ -230,13 +243,10 @@
                         [[NSUserDefaults standardUserDefaults] setObject:authToken forKey:kAuthToken];
                     }
                     
-                    
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                         completionHandler (nil, YES);
                     }];
                 } else {
-                    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                    NSLog(@"%@", responseString);
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                         completionHandler (error, NO);
                     }];

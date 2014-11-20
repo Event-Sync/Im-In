@@ -42,7 +42,6 @@
     [_tableView reloadData];
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -51,10 +50,13 @@
     
     self.navigationItem.rightBarButtonItem = addButton;
     self.title = @"Activities";
+
     
-    // load activities array
+    NSDictionary *eventDictionary = @{
+                                     @"jwt" : [[NetworkController sharedInstance] authToken]
+                                     };
     
-    [[NetworkController sharedInstance] fetchAllEventsUsingPath:^(NSError *error, NSMutableArray *response) {
+    [[NetworkController sharedInstance] fetchAllEventsWithCompletion: eventDictionary completionHandler: ^(NSError *error, NSMutableArray *response) {
         if (error != nil) {
             NSLog(@"%@", error.localizedDescription);
         } else {
@@ -77,7 +79,6 @@
     if (!authToken) {
         MenuViewController *menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MENU_VC"];
         [self presentViewController:menuVC animated:0 completion:nil];
-        
     }
 }
 
