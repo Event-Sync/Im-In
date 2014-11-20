@@ -8,10 +8,10 @@
                  {
                  "name": "Sam",
                  "phone_number": "+12064669834",
-                 "confirmed": false
+                 "confirmed": true
                  },
                  {
-                 "name": "Sam",
+                 "name": "Matt",
                  "phone_number": "+12064669834",
                  "confirmed": false
                  }

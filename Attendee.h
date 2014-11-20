@@ -11,7 +11,7 @@
 @interface Attendee : NSObject
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *telephoneNo;
-@property (nonatomic, strong) NSString *confirmedStatus;
+@property (nonatomic) BOOL confirmationStatus;
 @property (nonatomic, strong) UIImage *profileImage;
 - (instancetype) initWithDictionary: (NSDictionary *) attendeeDictionary;
 @end

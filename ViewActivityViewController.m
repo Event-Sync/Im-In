@@ -12,7 +12,7 @@
 #import "Attendee.h"
 #import "AttendeeTableViewCell.h"
 
-@interface ViewActivityViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewActivityViewController ()  <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eventStatusLabel;
@@ -60,18 +60,20 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL" forIndexPath:indexPath];
-//    AttendeeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL" forIndexPath:indexPath];
+    AttendeeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL" forIndexPath:indexPath];
     
 //    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+
+    Attendee *newAttendee = _attendees[indexPath.row];
+    cell.nameLabel.text = newAttendee.name;
+    cell.telephoneNoLabel.text = newAttendee.telephoneNo;
     
-//    if (_attendees.count > 0) {
-//        Attendee *newAttendee = _attendees[indexPath.row];
-//        cell.nameLabel.text = newAttendee.name;
-//        cell.telephoneNoLabel.text = newAttendee.telephoneNo;
-//        cell.statusLabel.text = newAttendee.confirmedStatus;
-////        cell.imageView = newAttendee.
-//    }
+    if (newAttendee.confirmationStatus == YES ) {
+        cell.statusLabel.text = @"Confirmed";
+    } else {
+        cell.statusLabel.text = @"Not confirmed";
+    }
+//        cell.imageView = newAttendee.
     
     return cell;
 

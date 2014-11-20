@@ -19,7 +19,7 @@
     if (self = [super init]) {
         _name = attendeeDictionary[@"name"];
         _telephoneNo = attendeeDictionary[@"phone_number"];
-        _confirmedStatus = attendeeDictionary[@"confirmed"];
+        _confirmationStatus = [(NSNumber *) attendeeDictionary[@"confirmed"] boolValue];
         _profileImage = nil;
     }
     return self;

@@ -105,7 +105,7 @@
     //ActivityTableViewCell *cell = (ActivityTableViewCell *) [tableView cellForRowAtIndexPath:indexPath];
     
     ViewActivityViewController *viewEventVC = [self.storyboard instantiateViewControllerWithIdentifier:@"VIEWEVENT_VC"];
-    [self.navigationController pushViewController:viewEventVC animated:true];
+    //[self.navigationController pushViewController:viewEventVC animated:true];
     
     Activity *selectedActivity = _filteredActivities[indexPath.row];
     
@@ -114,7 +114,8 @@
     NSLog(@"EventID = %@\n", selectedActivity.eventId);
     NSLog(@"EventDescription = %@\n", selectedActivity.eventDescription);
     
-    [self presentViewController:viewEventVC animated:true completion:nil];
+    [self.navigationController pushViewController:viewEventVC animated:true];
+    //[self presentViewController:viewEventVC animated:true completion:nil];
 }
 
 
