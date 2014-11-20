@@ -10,16 +10,18 @@
 
 @interface Activity : NSObject
 
-@property (nonatomic) NSInteger eventId;
+@property (nonatomic) NSString *eventId;
 @property (nonatomic, strong) NSString *eventName;
 @property (nonatomic, strong) NSString *eventDescription;
 @property (nonatomic, strong) NSString *eventLocation;
 @property (nonatomic, strong) NSString *eventTime;
 @property (nonatomic) BOOL eventExpired;
 @property (nonatomic) NSInteger statusCode;
-@property (nonatomic, strong) NSMutableArray *invitess;
+//@property (nonatomic, strong) NSMutableArray *invitess;
+@property (strong, nonatomic) NSMutableArray * attendees;
 
 - (instancetype) initWithDictionary: (NSDictionary *) activityDictionary;
 + (NSMutableArray *) parseJSONDataIntoActivities: (NSData *)rawJSONData;
++ (Activity *)parseJSONDataIntoActivity: (NSData *)rawJSONData;
 
 @end

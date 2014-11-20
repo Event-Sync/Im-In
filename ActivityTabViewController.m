@@ -15,7 +15,7 @@
 #import "MenuViewController.h"
 
 
-@interface ActivityTabViewController () 
+@interface ActivityTabViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *activities;
@@ -102,12 +102,12 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //ActivityTableViewCell *cell = (ActivityTableViewCell *) [tableView cellForRowAtIndexPath:indexPath];
     
     ViewActivityViewController *viewEventVC = [self.storyboard instantiateViewControllerWithIdentifier:@"VIEWEVENT_VC"];
     [self.navigationController pushViewController:viewEventVC animated:true];
     
 }
-
 
 
 @end
