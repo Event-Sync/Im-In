@@ -20,6 +20,11 @@
     [super viewDidLoad];
 
     self.title = @"Login";
+    [[self.loginButton layer] setBorderWidth:2.0f];
+    [[self.loginButton layer] setCornerRadius:10];
+    [[self.loginButton layer] setBorderColor:[UIColor whiteColor].CGColor];
+    self.loginButton.titleEdgeInsets = UIEdgeInsetsMake(7, 0, 0, 0);
+    self.loginButton.titleLabel.font = [UIFont fontWithName:@"Shree Devanagari 714" size:37];
 }
 
 - (IBAction)loginPressed:(id)sender {

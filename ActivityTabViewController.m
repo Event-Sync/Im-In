@@ -68,6 +68,10 @@
     
     _tableView.dataSource = self;
     _tableView.delegate = self;
+    
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
+    
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -99,6 +103,12 @@
     cell.textLabel.text = newActivity.eventDescription;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"DELETE");
+    }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

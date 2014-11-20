@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "SignUpViewController.h"
 #import "LoginViewController.h"
+#import "AYVibrantButton.h"
 
 @interface MenuViewController ()
 
@@ -22,7 +23,18 @@
     [super viewDidLoad];
 
     [[self.signUpButton layer] setBorderWidth:2.0f];
+    [[self.signUpButton layer] setCornerRadius:10];
     [[self.signUpButton layer] setBorderColor:[UIColor whiteColor].CGColor];
+    self.signUpButton.titleEdgeInsets = UIEdgeInsetsMake(7, 0, 0, 0);
+    
+    [[self.loginButton layer] setBorderWidth:2.0f];
+    [[self.loginButton layer] setCornerRadius:10];
+    [[self.loginButton layer] setBorderColor:[UIColor whiteColor].CGColor];
+    self.loginButton.titleEdgeInsets = UIEdgeInsetsMake(7, 0, 0, 0);
+    
+    self.signUpButton.titleLabel.font = [UIFont fontWithName:@"Shree Devanagari 714" size:37];
+    self.loginButton.titleLabel.font = [UIFont fontWithName:@"Shree Devanagari 714" size:37];
+    
 }
 
 - (IBAction)signUpPressed:(id)sender {
