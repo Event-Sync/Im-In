@@ -8,6 +8,7 @@
 
 #import "SignUpViewController.h"
 #import "ActivityTabViewController.h"
+#import "NetworkController.h"
 
 @interface SignUpViewController ()
 
@@ -23,9 +24,28 @@
     
     NSLog(@"Register pressed!");
     
-     ActivityTabViewController *activityTabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ACTIVITYTAB_VC"];
-    [self presentViewController:activityTabVC animated:true completion:nil];
+    NSDictionary *newAccountDict = @{
+         @"name" : @"John",
+         @"phone_number" : @"2054238988",
+         @"password" : @"codefellows"
+    };
+    
+    
+    [[NetworkController sharedInstance] createNewAccountWithCompletion:newAccountDict completionHandler:^(NSError *error, BOOL response) {
+        
+        if (error != nil) {
+            NSLog(@"%@", error.localizedDescription);
+        } else {
+            if (response == YES) {
+                ActivityTabViewController *activityTabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ACTIVITYTAB_VC"];
+                [self presentViewController:activityTabVC animated:true completion:nil];
+            }
+        }
+    }];
+    
+    
 }
+
 
 
 
