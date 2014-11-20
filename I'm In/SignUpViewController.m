@@ -20,6 +20,11 @@
     [super viewDidLoad];
     
     self.title = @"Sign Up";
+    [[self.registerButton layer] setBorderWidth:2.0f];
+    [[self.registerButton layer] setCornerRadius:10];
+    [[self.registerButton layer] setBorderColor:[UIColor whiteColor].CGColor];
+    self.registerButton.titleEdgeInsets = UIEdgeInsetsMake(7, 0, 0, 0);
+    self.registerButton.titleLabel.font = [UIFont fontWithName:@"Shree Devanagari 714" size:37];
 }
 
 - (IBAction)registerPressed:(id)sender {

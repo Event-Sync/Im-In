@@ -35,8 +35,15 @@
 		52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCC41A1A795F00745607 /* LaunchScreen.xib */; };
 		52FFCCD21A1A795F00745607 /* I_m_InTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCD11A1A795F00745607 /* I_m_InTests.m */; };
 		52FFCCEC1A1AAE1000745607 /* activity.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCEB1A1AAE1000745607 /* activity.jpeg */; };
+		52FFCCEF1A1AAEEA00745607 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCEE1A1AAEEA00745607 /* Activity.m */; };
+		D515DED01A1E7E5B00B1F400 /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D515DECF1A1E7E5B00B1F400 /* AYVibrantButton.m */; };
+		D515DED51A1EA02900B1F400 /* road-trip-ftr_Fotor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D515DED41A1EA02900B1F400 /* road-trip-ftr_Fotor.jpg */; };
+		D515DED91A1EA40700B1F400 /* unsplash_52c319226cefb_1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D515DED81A1EA40700B1F400 /* unsplash_52c319226cefb_1.jpeg */; };
+		D515DEDB1A1EAD7700B1F400 /* unsplash_52c319226cefb_1_Fotor 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D515DEDA1A1EAD7700B1F400 /* unsplash_52c319226cefb_1_Fotor 2.jpg */; };
+		D519DF131A1A7F980076EE0E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF121A1A7F980076EE0E /* MenuViewController.m */; };
 		D519DF4E1A1A88CA0076EE0E /* concert.png in Resources */ = {isa = PBXBuildFile; fileRef = D519DF4D1A1A88CA0076EE0E /* concert.png */; };
 		D58655F31A1D068800736DFC /* waterPeople.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D58655F21A1D068800736DFC /* waterPeople.jpeg */; };
+		D5FB0E311A1E6BC000B12F22 /* Shree714.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D5FB0E301A1E6BA800B12F22 /* Shree714.ttc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,8 +103,19 @@
 		52FFCCD01A1A795F00745607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FFCCD11A1A795F00745607 /* I_m_InTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = I_m_InTests.m; sourceTree = "<group>"; };
 		52FFCCEB1A1AAE1000745607 /* activity.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = activity.jpeg; sourceTree = "<group>"; };
+		52FFCCED1A1AAEEA00745607 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		52FFCCEE1A1AAEEA00745607 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		52FFCCF31A1ACB3100745607 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		D515DECF1A1E7E5B00B1F400 /* AYVibrantButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYVibrantButton.m; sourceTree = "<group>"; };
+		D515DED11A1E7E6400B1F400 /* AYVibrantButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
+		D515DED41A1EA02900B1F400 /* road-trip-ftr_Fotor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "road-trip-ftr_Fotor.jpg"; sourceTree = "<group>"; };
+		D515DED81A1EA40700B1F400 /* unsplash_52c319226cefb_1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unsplash_52c319226cefb_1.jpeg; sourceTree = "<group>"; };
+		D515DEDA1A1EAD7700B1F400 /* unsplash_52c319226cefb_1_Fotor 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "unsplash_52c319226cefb_1_Fotor 2.jpg"; sourceTree = "<group>"; };
+		D519DF111A1A7F980076EE0E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		D519DF121A1A7F980076EE0E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		D519DF4D1A1A88CA0076EE0E /* concert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = concert.png; sourceTree = "<group>"; };
 		D58655F21A1D068800736DFC /* waterPeople.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waterPeople.jpeg; sourceTree = "<group>"; };
+		D5FB0E301A1E6BA800B12F22 /* Shree714.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shree714.ttc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +168,10 @@
 		52FFCCB21A1A795F00745607 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D515DEDA1A1EAD7700B1F400 /* unsplash_52c319226cefb_1_Fotor 2.jpg */,
+				D515DED81A1EA40700B1F400 /* unsplash_52c319226cefb_1.jpeg */,
+				D515DED41A1EA02900B1F400 /* road-trip-ftr_Fotor.jpg */,
+				D5FB0E301A1E6BA800B12F22 /* Shree714.ttc */,
 				D58655F21A1D068800736DFC /* waterPeople.jpeg */,
 				52FFCCEB1A1AAE1000745607 /* activity.jpeg */,
 				52FFCCC21A1A795F00745607 /* Images.xcassets */,
@@ -233,6 +255,11 @@
 				5294BF5D1A1E7C9200E9EA2D /* AttendeeTableViewCell.m */,
 				5294BF5E1A1E7C9200E9EA2D /* AttendeeTableViewCell.xib */,
 				52FFCCBF1A1A795F00745607 /* Main.storyboard */,
+				D515DED11A1E7E6400B1F400 /* AYVibrantButton.h */,
+				D515DECF1A1E7E5B00B1F400 /* AYVibrantButton.m */,
+				52FFCCE41A1AA8FE00745607 /* ActivityTableViewCell.h */,
+				52FFCCE51A1AA8FE00745607 /* ActivityTableViewCell.m */,
+				52FFCCE61A1AA8FE00745607 /* ActivityTableViewCell.xib */,
 				52FFCCC41A1A795F00745607 /* LaunchScreen.xib */,
 			);
 			name = "View Layer";
@@ -324,11 +351,18 @@
 				5294BF3D1A1E7C3900E9EA2D /* activity.json in Resources */,
 				52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */,
 				520DD43B1A1BBF08004EBE2B /* newActivity.json in Resources */,
+				D515DEDB1A1EAD7700B1F400 /* unsplash_52c319226cefb_1_Fotor 2.jpg in Resources */,
+				52BB30A31A1D678E009040C4 /* InviteeTableViewCell.xib in Resources */,
 				D58655F31A1D068800736DFC /* waterPeople.jpeg in Resources */,
+				D515DED91A1EA40700B1F400 /* unsplash_52c319226cefb_1.jpeg in Resources */,
+				52FFCCE81A1AA8FE00745607 /* ActivityTableViewCell.xib in Resources */,
 				520DD4331A1BBE4F004EBE2B /* signup.json in Resources */,
 				5294BF401A1E7C3900E9EA2D /* getAllEvents.json in Resources */,
 				5294BF631A1E7C9200E9EA2D /* ActivityTableViewCell.xib in Resources */,
 				52FFCCEC1A1AAE1000745607 /* activity.jpeg in Resources */,
+				D5FB0E311A1E6BC000B12F22 /* Shree714.ttc in Resources */,
+				D515DED51A1EA02900B1F400 /* road-trip-ftr_Fotor.jpg in Resources */,
+				520DD43D1A1BDB48004EBE2B /* activity.json in Resources */,
 				520DD4351A1BBE66004EBE2B /* login.json in Resources */,
 				5294BF651A1E7C9200E9EA2D /* AttendeeTableViewCell.xib in Resources */,
 				52FFCCC31A1A795F00745607 /* Images.xcassets in Resources */,
