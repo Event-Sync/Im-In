@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Activity.h"
 
 @interface NetworkController : NSObject
 @property (nonatomic, strong) NSString *authToken;
 + (id) sharedInstance;
+- (void) fetchSingleEventUsingPath: (NSString *) eventId completionHandler: (void(^) (NSError *error, Activity *response)) completionHandler;
 - (void) fetchAllEventsUsingPath: (void(^) (NSError *error, NSMutableArray *response)) completionHandler;
 - (void) fetchEventWithCompletion: (NSString *) eventId completionHandler: (void(^) (NSError *error, NSMutableArray *response)) completionHandler;
 - (void) fetchAllEventsWithCompletion: (void(^) (NSError *error, NSMutableArray *response)) completionHandler;

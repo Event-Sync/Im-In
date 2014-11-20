@@ -13,6 +13,11 @@
 		520DD4391A1BBEF2004EBE2B /* allactivities.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD4381A1BBEF2004EBE2B /* allactivities.json */; };
 		520DD43B1A1BBF08004EBE2B /* newActivity.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD43A1A1BBF08004EBE2B /* newActivity.json */; };
 		520DD43D1A1BDB48004EBE2B /* activity.json in Resources */ = {isa = PBXBuildFile; fileRef = 520DD43C1A1BDB48004EBE2B /* activity.json */; };
+		52BB30991A1D1351009040C4 /* AttendeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BB30971A1D1351009040C4 /* AttendeeTableViewCell.m */; };
+		52BB309A1A1D1351009040C4 /* AttendeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BB30981A1D1351009040C4 /* AttendeeTableViewCell.xib */; };
+		52BB309D1A1D1837009040C4 /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BB309C1A1D1837009040C4 /* Attendee.m */; };
+		52BB30A21A1D678E009040C4 /* InviteeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BB30A01A1D678E009040C4 /* InviteeTableViewCell.m */; };
+		52BB30A31A1D678E009040C4 /* InviteeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BB30A11A1D678E009040C4 /* InviteeTableViewCell.xib */; };
 		52FFCCB51A1A795F00745607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB41A1A795F00745607 /* main.m */; };
 		52FFCCB81A1A795F00745607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB71A1A795F00745607 /* AppDelegate.m */; };
 		52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCBF1A1A795F00745607 /* Main.storyboard */; };
@@ -24,7 +29,6 @@
 		52FFCCE81A1AA8FE00745607 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCE61A1AA8FE00745607 /* ActivityTableViewCell.xib */; };
 		52FFCCEC1A1AAE1000745607 /* activity.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCEB1A1AAE1000745607 /* activity.jpeg */; };
 		52FFCCEF1A1AAEEA00745607 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCEE1A1AAEEA00745607 /* Activity.m */; };
-		52FFCCF21A1AB78000745607 /* Invitee.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCF11A1AB78000745607 /* Invitee.m */; };
 		D519DF131A1A7F980076EE0E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF121A1A7F980076EE0E /* MenuViewController.m */; };
 		D519DF4E1A1A88CA0076EE0E /* concert.png in Resources */ = {isa = PBXBuildFile; fileRef = D519DF4D1A1A88CA0076EE0E /* concert.png */; };
 		D519DF511A1A90500076EE0E /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D519DF501A1A90500076EE0E /* SignUpViewController.m */; };
@@ -53,6 +57,14 @@
 		520DD4381A1BBEF2004EBE2B /* allactivities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = allactivities.json; path = "I'm In/allactivities.json"; sourceTree = "<group>"; };
 		520DD43A1A1BBF08004EBE2B /* newActivity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = newActivity.json; path = "I'm In/newActivity.json"; sourceTree = "<group>"; };
 		520DD43C1A1BDB48004EBE2B /* activity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activity.json; sourceTree = "<group>"; };
+		52BB30961A1D1351009040C4 /* AttendeeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendeeTableViewCell.h; sourceTree = "<group>"; };
+		52BB30971A1D1351009040C4 /* AttendeeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendeeTableViewCell.m; sourceTree = "<group>"; };
+		52BB30981A1D1351009040C4 /* AttendeeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendeeTableViewCell.xib; sourceTree = "<group>"; };
+		52BB309B1A1D1837009040C4 /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attendee.h; sourceTree = "<group>"; };
+		52BB309C1A1D1837009040C4 /* Attendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attendee.m; sourceTree = "<group>"; };
+		52BB309F1A1D678E009040C4 /* InviteeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteeTableViewCell.h; sourceTree = "<group>"; };
+		52BB30A01A1D678E009040C4 /* InviteeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteeTableViewCell.m; sourceTree = "<group>"; };
+		52BB30A11A1D678E009040C4 /* InviteeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InviteeTableViewCell.xib; sourceTree = "<group>"; };
 		52FFCCAF1A1A795F00745607 /* I'm In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I'm In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFCCB31A1A795F00745607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FFCCB41A1A795F00745607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -72,8 +84,6 @@
 		52FFCCEB1A1AAE1000745607 /* activity.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = activity.jpeg; sourceTree = "<group>"; };
 		52FFCCED1A1AAEEA00745607 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
 		52FFCCEE1A1AAEEA00745607 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
-		52FFCCF01A1AB78000745607 /* Invitee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invitee.h; sourceTree = "<group>"; };
-		52FFCCF11A1AB78000745607 /* Invitee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invitee.m; sourceTree = "<group>"; };
 		52FFCCF31A1ACB3100745607 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		D519DF111A1A7F980076EE0E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		D519DF121A1A7F980076EE0E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
@@ -197,6 +207,7 @@
 		D519DF0F1A1A7F420076EE0E /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
+				52FFCCF31A1ACB3100745607 /* Constant.h */,
 				520DD43C1A1BDB48004EBE2B /* activity.json */,
 				520DD4321A1BBE4F004EBE2B /* signup.json */,
 				520DD4341A1BBE66004EBE2B /* login.json */,
@@ -207,9 +218,8 @@
 				52FFCCB71A1A795F00745607 /* AppDelegate.m */,
 				52FFCCED1A1AAEEA00745607 /* Activity.h */,
 				52FFCCEE1A1AAEEA00745607 /* Activity.m */,
-				52FFCCF01A1AB78000745607 /* Invitee.h */,
-				52FFCCF11A1AB78000745607 /* Invitee.m */,
-				52FFCCF31A1ACB3100745607 /* Constant.h */,
+				52BB309B1A1D1837009040C4 /* Attendee.h */,
+				52BB309C1A1D1837009040C4 /* Attendee.m */,
 			);
 			name = "Model Layer";
 			path = ..;
@@ -223,6 +233,12 @@
 				52FFCCE61A1AA8FE00745607 /* ActivityTableViewCell.xib */,
 				52FFCCC41A1A795F00745607 /* LaunchScreen.xib */,
 				52FFCCBF1A1A795F00745607 /* Main.storyboard */,
+				52BB309F1A1D678E009040C4 /* InviteeTableViewCell.h */,
+				52BB30A01A1D678E009040C4 /* InviteeTableViewCell.m */,
+				52BB30A11A1D678E009040C4 /* InviteeTableViewCell.xib */,
+				52BB30961A1D1351009040C4 /* AttendeeTableViewCell.h */,
+				52BB30971A1D1351009040C4 /* AttendeeTableViewCell.m */,
+				52BB30981A1D1351009040C4 /* AttendeeTableViewCell.xib */,
 			);
 			name = "View Layer";
 			path = ..;
@@ -312,6 +328,7 @@
 				52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */,
 				52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */,
 				520DD43B1A1BBF08004EBE2B /* newActivity.json in Resources */,
+				52BB30A31A1D678E009040C4 /* InviteeTableViewCell.xib in Resources */,
 				D58655F31A1D068800736DFC /* waterPeople.jpeg in Resources */,
 				52FFCCE81A1AA8FE00745607 /* ActivityTableViewCell.xib in Resources */,
 				520DD4331A1BBE4F004EBE2B /* signup.json in Resources */,
@@ -319,6 +336,7 @@
 				520DD43D1A1BDB48004EBE2B /* activity.json in Resources */,
 				520DD4351A1BBE66004EBE2B /* login.json in Resources */,
 				52FFCCC31A1A795F00745607 /* Images.xcassets in Resources */,
+				52BB309A1A1D1351009040C4 /* AttendeeTableViewCell.xib in Resources */,
 				520DD4391A1BBEF2004EBE2B /* allactivities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +357,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				52FFCCE71A1AA8FE00745607 /* ActivityTableViewCell.m in Sources */,
+				52BB309D1A1D1837009040C4 /* Attendee.m in Sources */,
+				52BB30A21A1D678E009040C4 /* InviteeTableViewCell.m in Sources */,
 				D519DF601A1A90C30076EE0E /* ViewActivityViewController.m in Sources */,
 				52FFCCB81A1A795F00745607 /* AppDelegate.m in Sources */,
 				D519DF571A1A908E0076EE0E /* ActivityTabViewController.m in Sources */,
@@ -347,8 +367,8 @@
 				D519DF511A1A90500076EE0E /* SignUpViewController.m in Sources */,
 				D519DF5D1A1A90B10076EE0E /* NewActivityViewController.m in Sources */,
 				52FFCCB51A1A795F00745607 /* main.m in Sources */,
+				52BB30991A1D1351009040C4 /* AttendeeTableViewCell.m in Sources */,
 				D519DF541A1A90610076EE0E /* LoginViewController.m in Sources */,
-				52FFCCF21A1AB78000745607 /* Invitee.m in Sources */,
 				52FFCCEF1A1AAEEA00745607 /* Activity.m in Sources */,
 				D519DF5A1A1A909D0076EE0E /* ProfileTabViewController.m in Sources */,
 			);

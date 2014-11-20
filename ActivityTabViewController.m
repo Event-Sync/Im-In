@@ -11,8 +11,10 @@
 #import "ActivityTableViewCell.h"
 #import "NetworkController.h"
 #import "NewActivityViewController.h"
+#import "AttendeeTableViewCell.h"
+#import "ViewActivityViewController.h"
 
-@interface ActivityTabViewController () 
+@interface ActivityTabViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *activities;
@@ -88,9 +90,19 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //ActivityTableViewCell *cell = (ActivityTableViewCell *) [tableView cellForRowAtIndexPath:indexPath];
     
+    ViewActivityViewController *destinationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"VIEWACTIVITY_VC"];
+    
+    Activity *selectedActivity = _filteredActivities[indexPath.row];
+    
+    destinationVC.activity = selectedActivity;
+    
+    NSLog(@"EventID = %@\n", selectedActivity.eventId);
+    NSLog(@"EventDescription = %@\n", selectedActivity.eventDescription);
+    
+    [self presentViewController:destinationVC animated:true completion:nil];
 }
-
 
 
 @end

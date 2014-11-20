@@ -9,6 +9,6 @@
 #ifndef I_m_In_Constant_h
 #define I_m_In_Constant_h
 
-NSString * const kAPI = @"https://iamin.herokuapp.com/";
+NSString * const kAPI = @"https://iamin.herokuapp.com/api/";
 
 #endif
