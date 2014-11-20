@@ -38,7 +38,7 @@
     };
     
     
-    [[NetworkController sharedInstance] createAccountOrLoginWithCompletion:newAccountDict completionHandler:^(NSError *error, BOOL response) {
+    [[NetworkController sharedInstance] createAccountWithCompletion:newAccountDict completionHandler:^(NSError *error, BOOL response) {
         
         if (error != nil) {
             NSLog(@"%@", error.localizedDescription);

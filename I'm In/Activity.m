@@ -17,36 +17,58 @@
 
 - (instancetype) initWithDictionary: (NSDictionary *) activityDictionary {
     if (self = [super init]) {
+        
         _eventId = activityDictionary[@"event_id"];
         _eventName = activityDictionary[@"event_name"];
-        _eventDescription = activityDictionary[@"event_description"];
+        //_eventDescription = activityDictionary[@"event_description"];
+
         _eventLocation = activityDictionary[@"event_location"];
-        _eventTime  = activityDictionary[@"event_time"];
-        _eventExpired  =  [(NSNumber *) activityDictionary[@"event_expired"] boolValue];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+        [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+        NSDate *date  = [dateFormatter dateFromString: activityDictionary[@"event_time"]];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+        NSString *newDate = [dateFormatter stringFromDate:date];
+//        NSLog(@"date %@", date);
+//        NSLog(@"newDate %@", newDate);
+        
+        _eventTime  = newDate;
+        
+        if ([self isEndDateIsSmallerThanCurrent:(date)] == YES ) {
+            _eventExpired = 1;
+        } else {
+            _eventExpired = 0;
+        }
+//        _eventExpired  =  [(NSNumber *) activityDictionary[@"event_expired"] boolValue];
         _statusCode = (NSInteger) activityDictionary[@"status_code"];
     }
+
     return self;
 }
 
-//- (instancetype) initWithDictionaries: (NSDictionary *) activityDictionary inviteeDictionary: (NSDictionary *) inviteeDictionary {
-//    if (self = [super init]) {
-//        _eventId = activityDictionary[@"event_id"];
-//        _eventName = activityDictionary[@"event_name"];
-//        _eventDescription = activityDictionary[@"event_description"];
-//        _eventLocation = activityDictionary[@"event_location"];
-//        _eventTime  = activityDictionary[@"event_time"];
-//        _eventExpired  =  (BOOL)  activityDictionary[@"event_expired"];
-//        _statusCode = (NSInteger) activityDictionary[@"status_code"];;
-//    }
-//    return self;
-//}
+- (BOOL)isEndDateIsSmallerThanCurrent:(NSDate *)checkEndDate
+{
+    NSDate* enddate = checkEndDate;
+    NSDate* currentdate = [NSDate date];
+    NSTimeInterval distanceBetweenDates = [enddate timeIntervalSinceDate:currentdate];
+    double secondsInMinute = 60;
+    NSInteger secondsBetweenDates = distanceBetweenDates / secondsInMinute;
+    
+    if (secondsBetweenDates == 0)
+        return YES;
+    else if (secondsBetweenDates < 0)
+        return YES;
+    else
+        return NO;
+}
 
 + (NSMutableArray *)parseJSONDataIntoActivities: (NSData *)rawJSONData {
     NSError *error = nil;
     NSMutableArray *activities = [[NSMutableArray alloc]init];
     NSDictionary *searchJSONDictionary = [NSJSONSerialization JSONObjectWithData:rawJSONData options:0 error:&error];
     
-    for (NSDictionary *itemsDictionary in searchJSONDictionary[@"events_created"]) {
+    for (NSDictionary *itemsDictionary in searchJSONDictionary) {
         Activity *activityObject = [[Activity alloc] initWithDictionary: itemsDictionary];
         [activities addObject: activityObject];
     }
