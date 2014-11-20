@@ -45,8 +45,7 @@
 - (void) fetchSingleEventUsingPath: (NSString *) eventId completionHandler: (void(^) (NSError *error, Activity *response)) completionHandler {
     NSString *pathToJSON = [[NSBundle mainBundle] pathForResource:@"activity" ofType:@"json"];
     NSData *JSONEventData = [NSData dataWithContentsOfFile:pathToJSON];
-    
-//    NSMutableArray *eventArray = [[NSMutableArray alloc] init];
+
     Activity *activity = [Activity parseJSONDataIntoActivity:JSONEventData];
     
     completionHandler(nil, activity);
