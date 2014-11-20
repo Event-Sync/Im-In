@@ -11,9 +11,9 @@
 #import "ActivityTableViewCell.h"
 #import "NetworkController.h"
 #import "NewActivityViewController.h"
+#import "AttendeeTableViewCell.h"
 #import "ViewActivityViewController.h"
 #import "MenuViewController.h"
-
 
 @interface ActivityTabViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -107,6 +107,14 @@
     ViewActivityViewController *viewEventVC = [self.storyboard instantiateViewControllerWithIdentifier:@"VIEWEVENT_VC"];
     [self.navigationController pushViewController:viewEventVC animated:true];
     
+    Activity *selectedActivity = _filteredActivities[indexPath.row];
+    
+    viewEventVC.activity = selectedActivity;
+    
+    NSLog(@"EventID = %@\n", selectedActivity.eventId);
+    NSLog(@"EventDescription = %@\n", selectedActivity.eventDescription);
+    
+    [self presentViewController:viewEventVC animated:true completion:nil];
 }
 
 

@@ -228,11 +228,11 @@
 		D519DF101A1A7F480076EE0E /* View Layer */ = {
 			isa = PBXGroup;
 			children = (
+				52FFCCBF1A1A795F00745607 /* Main.storyboard */,
 				52FFCCE41A1AA8FE00745607 /* ActivityTableViewCell.h */,
 				52FFCCE51A1AA8FE00745607 /* ActivityTableViewCell.m */,
 				52FFCCE61A1AA8FE00745607 /* ActivityTableViewCell.xib */,
 				52FFCCC41A1A795F00745607 /* LaunchScreen.xib */,
-				52FFCCBF1A1A795F00745607 /* Main.storyboard */,
 				52BB309F1A1D678E009040C4 /* InviteeTableViewCell.h */,
 				52BB30A01A1D678E009040C4 /* InviteeTableViewCell.m */,
 				52BB30A11A1D678E009040C4 /* InviteeTableViewCell.xib */,
