@@ -11,11 +11,11 @@
 #import "ActivityTableViewCell.h"
 #import "NetworkController.h"
 #import "NewActivityViewController.h"
+#import "AttendeeTableViewCell.h"
 #import "ViewActivityViewController.h"
 #import "MenuViewController.h"
 
-
-@interface ActivityTabViewController () 
+@interface ActivityTabViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *activities;
@@ -102,12 +102,21 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //ActivityTableViewCell *cell = (ActivityTableViewCell *) [tableView cellForRowAtIndexPath:indexPath];
     
     ViewActivityViewController *viewEventVC = [self.storyboard instantiateViewControllerWithIdentifier:@"VIEWEVENT_VC"];
-    [self.navigationController pushViewController:viewEventVC animated:true];
+    //[self.navigationController pushViewController:viewEventVC animated:true];
     
+    Activity *selectedActivity = _filteredActivities[indexPath.row];
+    
+    viewEventVC.activity = selectedActivity;
+    
+    NSLog(@"EventID = %@\n", selectedActivity.eventId);
+    NSLog(@"EventDescription = %@\n", selectedActivity.eventDescription);
+    
+    [self.navigationController pushViewController:viewEventVC animated:true];
+    //[self presentViewController:viewEventVC animated:true completion:nil];
 }
-
 
 
 @end

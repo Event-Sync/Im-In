@@ -17,6 +17,15 @@
 
 - (void)awakeFromNib {
     // Initialization code
+//    self.innerView.layer.cornerRadius = 15;
+//    self.innerView.clipsToBounds = true;
+    
+    if (_activity != nil) {
+        _eventId = _activity.eventId;
+        _dateLabel.text = _activity.eventTime;
+        _descriptionLabel.text = _activity.eventDescription;
+    }
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

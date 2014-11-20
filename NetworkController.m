@@ -65,6 +65,16 @@
 //NSArray *jsonArray = jsonDict[@"items"];
 //XCTAssertTrue([jsonArray isKindOfClass:[NSArray class]], @"JSON file is not an array class");
 
+- (void) fetchSingleEventUsingPath: (NSString *) eventId completionHandler: (void(^) (NSError *error, Activity *response)) completionHandler {
+    NSString *pathToJSON = [[NSBundle mainBundle] pathForResource:@"activity" ofType:@"json"];
+    NSData *JSONEventData = [NSData dataWithContentsOfFile:pathToJSON];
+    
+//    NSMutableArray *eventArray = [[NSMutableArray alloc] init];
+    Activity *activity = [Activity parseJSONDataIntoActivity:JSONEventData];
+    
+    completionHandler(nil, activity);
+}
+
 - (void) fetchAllEventsUsingPath: (void(^) (NSError *error, NSMutableArray *response)) completionHandler {
     NSString *pathToJSON = [[NSBundle mainBundle] pathForResource:@"allactivities" ofType:@"json"];
     NSData *JSONEventData = [NSData dataWithContentsOfFile:pathToJSON];
