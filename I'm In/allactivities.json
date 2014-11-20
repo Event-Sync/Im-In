@@ -1,49 +1,147 @@
-{
-    "jwt" : "",
-    "name": "Matt",
-    "phone_number": "+12064669834",
-    "events_created": [
-                       {
-                       "event_id": 1,
-                       "event_name": "Interstellar movie meetup",
-                       "event_description": "movie meetup description",
-                       "event_location": "Code Fellows Cinema",
-                       "event_time": "12/01/2014 19:00PM",
-                       "event_expired": false,
-                       "status_code": 200,
-                       "invitees": [
-                                    {
-                                    "name": "Sam",
-                                    "phone_number": "+12064669834",
-                                    "confirmed": false
-                                    },
-                                    {
-                                    "name": "Sam",
-                                    "phone_number": "+12064669834",
-                                    "confirmed": false
-                                    }
-                                    ]
-                       },
-                       {
-                       "event_id": 2,
-                       "event_name": "Past event",
-                       "event_description": "Past event descript",
-                       "event_location": "Code Fellows Cinema 2",
-                       "event_time": "10/01/2014 19:00PM",
-                       "event_expired": true,
-                       "status_code": 200,
-                       "invitees": [
-                                    {
-                                    "name": "Sam",
-                                    "phone_number": "+12064669834",
-                                    "confirmed": false
-                                    },
-                                    {
-                                    "name": "Sam",
-                                    "phone_number": "+12064669834",
-                                    "confirmed": false
-                                    }
-                                    ]
-                       }
-                       ]
-}
+ [
+  {
+  "event_id":"kvass6",
+  "owner_name":"IM IN",
+  "user_phone_number":"5555555555",
+  "event_name":"STAND UP",
+  "event_location":"Codefellows, 2nd Floor",
+  "event_time":"2014-11-19T00:43:24.280Z",
+  "_id":"546be7ac49580d0b00f8c6b5",
+  "__v":0,
+  "invitees":[
+              {
+              "name":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1NDZiZTc4YzQ5NTgwZDBiMDBmOGM2YjQifQ.oofg-cwg8zmnjq9nUh6thuyHroMAhXb6nvB6HgT2TO0",
+              "phone_Num":"9152521559",
+              "confirmed":false,
+              "_id":"546be7ac49580d0b00f8c6b7"
+              }
+              ]
+  },
+  {
+  "event_id":"knobs32",
+  "owner_name":"IM IN",
+  "user_phone_number":"5555555555",
+  "event_name":"STAND UP",
+  "event_location":"Codefellows, 2nd Floor",
+  "event_time":"2015-11-19T02:16:19.594Z",
+  "_id":"546bfd735501e10b00ccc3c0",
+  "__v":0,
+  "invitees":[
+              {
+              "name":"Johnny",
+              "phone_Num":"9152521559",
+              "confirmed":false,
+              "_id":"546bfd735501e10b00ccc3c2"
+              }
+              ]
+  },
+  {
+  "event_id":"cubeb58",
+  "owner_name":"IM IN",
+  "user_phone_number":"5555555555",
+  "event_name":"STAND UP",
+  "event_location":"Codefellows, 2nd Floor",
+  "event_time":"2014-11-19T17:36:43.450Z",
+  "_id":"546cd522c6a8270200d0c7b4",
+  "__v":0,
+  "invitees":[
+              {
+              "name":"Johnny",
+              "phone_Num":"9152521559",
+              "confirmed":false,
+              "_id":"546cd522c6a8270200d0c7b6"
+              }
+              ]
+  },
+  {
+  "_id":"546e3a8ad819080200442980",
+  "event_id":"knobs67",
+  "owner_name":"IM IN",
+  "user_phone_number":"5555555555",
+  "event_name":"STAND UP",
+  "event_location":"Codefellows, 2nd Floor",
+  "event_time":"2014-11-20T19:01:30.776Z",
+  "__v":0,
+  "invitees":[
+              {
+              "name":"Johnny",
+              "phone_Num":"6175493609",
+              "confirmed":false,
+              "_id":"546e3a8ad819080200442982"
+              }
+              ]
+  },
+  {
+  "_id":"546e3e76d819080200442985",
+  "event_id":"nerpa64",
+  "owner_name":"IM IN",
+  "user_phone_number":"5555555555",
+  "event_name":"STAND UP",
+  "event_location":"Codefellows, 2nd Floor",
+  "event_time":"2014-11-20T19:18:14.174Z",
+  "__v":0,
+  "invitees":[
+              {
+              "name":"Johnny",
+              "phone_Num":"9152521559",
+              "confirmed":false,
+              "_id":"546e3e76d819080200442987"
+              }
+              ]
+  },
+  {
+  "_id":"546e3eced819080200442988",
+  "event_id":"hyrax95",
+  "owner_name":"IM IN",
+  "user_phone_number":"5555555555",
+  "event_name":"STAND UP",
+  "event_location":"Codefellows, 2nd Floor",
+  "event_time":"2014-11-20T19:19:41.174Z",
+  "__v":0,
+  "invitees":[
+              {
+              "name":"Johnny",
+              "phone_Num":"9152521559",
+              "confirmed":false,
+              "_id":"546e3eced81908020044298a"
+              }
+              ]
+  },
+  {
+  "_id":"546e3ecfd81908020044298b",
+  "event_id":"kvass75",
+  "owner_name":"IM IN",
+  "user_phone_number":"5555555555",
+  "event_name":"STAND UP",
+  "event_location":"Codefellows, 2nd Floor",
+  "event_time":"2014-11-20T19:19:43.568Z",
+  "__v":0,
+  "invitees":[
+              {
+              "name":"Johnny",
+              "phone_Num":"9152521559",
+              "confirmed":false,
+              "_id":"546e3ecfd81908020044298d"
+              }
+              ]
+  },
+  {
+  "_id":"546e44f4c89a9c02000528cd",
+  "event_id":"vapid59",
+  "owner_name":"IM IN",
+  "user_phone_number":"5555555555",
+  "event_name":"STAND UP",
+  "event_location":"Codefellows, 2nd Floor",
+  "event_time":"2014-11-20T19:45:56.597Z",
+  "__v":0,
+  "invitees":[
+              {
+              "name":"Johnny",
+              "phone_Num":"9152521559",
+              "confirmed":false,
+              "_id":"546e44f4c89a9c02000528cf"
+              }
+              ]
+  }
+]
+

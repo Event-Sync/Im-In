@@ -28,8 +28,6 @@
 		5294BF631A1E7C9200E9EA2D /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5294BF5B1A1E7C9200E9EA2D /* ActivityTableViewCell.xib */; };
 		5294BF641A1E7C9200E9EA2D /* AttendeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF5D1A1E7C9200E9EA2D /* AttendeeTableViewCell.m */; };
 		5294BF651A1E7C9200E9EA2D /* AttendeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5294BF5E1A1E7C9200E9EA2D /* AttendeeTableViewCell.xib */; };
-		5294BF661A1E7C9200E9EA2D /* InviteeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF601A1E7C9200E9EA2D /* InviteeTableViewCell.m */; };
-		5294BF671A1E7C9200E9EA2D /* InviteeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5294BF611A1E7C9200E9EA2D /* InviteeTableViewCell.xib */; };
 		52FFCCB51A1A795F00745607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB41A1A795F00745607 /* main.m */; };
 		52FFCCB81A1A795F00745607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB71A1A795F00745607 /* AppDelegate.m */; };
 		52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCBF1A1A795F00745607 /* Main.storyboard */; };
@@ -86,9 +84,6 @@
 		5294BF5C1A1E7C9200E9EA2D /* AttendeeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendeeTableViewCell.h; path = "I'm In/AttendeeTableViewCell.h"; sourceTree = "<group>"; };
 		5294BF5D1A1E7C9200E9EA2D /* AttendeeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendeeTableViewCell.m; path = "I'm In/AttendeeTableViewCell.m"; sourceTree = "<group>"; };
 		5294BF5E1A1E7C9200E9EA2D /* AttendeeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AttendeeTableViewCell.xib; path = "I'm In/AttendeeTableViewCell.xib"; sourceTree = "<group>"; };
-		5294BF5F1A1E7C9200E9EA2D /* InviteeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InviteeTableViewCell.h; path = "I'm In/InviteeTableViewCell.h"; sourceTree = "<group>"; };
-		5294BF601A1E7C9200E9EA2D /* InviteeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InviteeTableViewCell.m; path = "I'm In/InviteeTableViewCell.m"; sourceTree = "<group>"; };
-		5294BF611A1E7C9200E9EA2D /* InviteeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InviteeTableViewCell.xib; path = "I'm In/InviteeTableViewCell.xib"; sourceTree = "<group>"; };
 		52FFCCAF1A1A795F00745607 /* I'm In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I'm In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFCCB31A1A795F00745607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FFCCB41A1A795F00745607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -209,20 +204,20 @@
 		D519DF0F1A1A7F420076EE0E /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
+				5294BF361A1E7C0B00E9EA2D /* Constant.h */,
 				5294BF371A1E7C3900E9EA2D /* Activity.h */,
-				5294BF381A1E7C3900E9EA2D /* activity.json */,
 				5294BF391A1E7C3900E9EA2D /* Activity.m */,
 				5294BF3A1A1E7C3900E9EA2D /* Attendee.h */,
 				5294BF3B1A1E7C3900E9EA2D /* Attendee.m */,
+				52FFCCB61A1A795F00745607 /* AppDelegate.h */,
+				52FFCCB71A1A795F00745607 /* AppDelegate.m */,
 				5294BF3C1A1E7C3900E9EA2D /* getAllEvents.json */,
-				5294BF361A1E7C0B00E9EA2D /* Constant.h */,
 				520DD4321A1BBE4F004EBE2B /* signup.json */,
 				520DD4341A1BBE66004EBE2B /* login.json */,
 				520DD4361A1BBED9004EBE2B /* loginConfirmation.json */,
 				520DD4381A1BBEF2004EBE2B /* allactivities.json */,
+				5294BF381A1E7C3900E9EA2D /* activity.json */,
 				520DD43A1A1BBF08004EBE2B /* newActivity.json */,
-				52FFCCB61A1A795F00745607 /* AppDelegate.h */,
-				52FFCCB71A1A795F00745607 /* AppDelegate.m */,
 			);
 			name = "Model Layer";
 			path = ..;
@@ -237,9 +232,6 @@
 				5294BF5C1A1E7C9200E9EA2D /* AttendeeTableViewCell.h */,
 				5294BF5D1A1E7C9200E9EA2D /* AttendeeTableViewCell.m */,
 				5294BF5E1A1E7C9200E9EA2D /* AttendeeTableViewCell.xib */,
-				5294BF5F1A1E7C9200E9EA2D /* InviteeTableViewCell.h */,
-				5294BF601A1E7C9200E9EA2D /* InviteeTableViewCell.m */,
-				5294BF611A1E7C9200E9EA2D /* InviteeTableViewCell.xib */,
 				52FFCCBF1A1A795F00745607 /* Main.storyboard */,
 				52FFCCC41A1A795F00745607 /* LaunchScreen.xib */,
 			);
@@ -329,7 +321,6 @@
 			files = (
 				520DD4371A1BBED9004EBE2B /* loginConfirmation.json in Resources */,
 				52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */,
-				5294BF671A1E7C9200E9EA2D /* InviteeTableViewCell.xib in Resources */,
 				5294BF3D1A1E7C3900E9EA2D /* activity.json in Resources */,
 				52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */,
 				520DD43B1A1BBF08004EBE2B /* newActivity.json in Resources */,
@@ -361,7 +352,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5294BF531A1E7C7400E9EA2D /* MenuViewController.m in Sources */,
-				5294BF661A1E7C9200E9EA2D /* InviteeTableViewCell.m in Sources */,
 				5294BF621A1E7C9200E9EA2D /* ActivityTableViewCell.m in Sources */,
 				5294BF581A1E7C7400E9EA2D /* ViewActivityViewController.m in Sources */,
 				5294BF3E1A1E7C3900E9EA2D /* Activity.m in Sources */,

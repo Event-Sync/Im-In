@@ -26,13 +26,12 @@
     
     NSLog(@"Login Pressed!");
     
-    NSDictionary *loginDict = @{
+    NSDictionary *loginDictionary = @{
          @"phone_number" : self.phoneNumberTextField.text,
          @"password" : self.passwordTextField.text
     };
     
-    [[NetworkController sharedInstance] createAccountOrLoginWithCompletion:loginDict completionHandler:^(NSError *error, BOOL response) {
-        
+    [[NetworkController sharedInstance] loginWithCompletion:loginDictionary completionHandler:^(NSError *error, BOOL response) {
         if (error != nil) {
             NSLog(@"%@", error.localizedDescription);
         } else {

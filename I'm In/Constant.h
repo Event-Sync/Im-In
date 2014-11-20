@@ -14,7 +14,7 @@ NSString * const kAuthToken = @"authToken";
 
 //https://iamin.herokuapp.com/
 //.post(/v1/api/newEvent)-to make new event
-//.get(/v1/api/Event/[event_Id])-to retrieve an event
+//.get(/v1/api/Event/eventId?jwt=sfsdfsd)-to retrieve an event
 //.delete(/v1/api/Event/delete/)-to delete event
 //.put('/v1/api/Event/)-to update event
 //.get('/v1/api/Event/)-retrieve all events
