@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"Sign Up";
 }
 
 - (IBAction)registerPressed:(id)sender {
@@ -25,13 +27,13 @@
     NSLog(@"Register pressed!");
     
     NSDictionary *newAccountDict = @{
-         @"name" : @"John",
-         @"phone_number" : @"2054238988",
-         @"password" : @"codefellows"
+         @"name" : self.nameTextField.text,
+         @"phone_number" : self.phoneNumberTextField.text,
+         @"password" : self.passwordTextField.text
     };
     
     
-    [[NetworkController sharedInstance] createNewAccountWithCompletion:newAccountDict completionHandler:^(NSError *error, BOOL response) {
+    [[NetworkController sharedInstance] createAccountOrLoginWithCompletion:newAccountDict completionHandler:^(NSError *error, BOOL response) {
         
         if (error != nil) {
             NSLog(@"%@", error.localizedDescription);

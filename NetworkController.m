@@ -30,9 +30,13 @@
 - (id) init {
     //    _configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
     //    _session = [NSURLSession sessionWithConfiguration:_configuration];
+    self = [super init];
     
-    [self setConfiguration: [NSURLSessionConfiguration defaultSessionConfiguration]];
-    [self setSession: [NSURLSession sessionWithConfiguration: _configuration]];return self;
+    if (self) {
+        [self setConfiguration: [NSURLSessionConfiguration defaultSessionConfiguration]];
+        [self setSession: [NSURLSession sessionWithConfiguration: _configuration]];
+    }
+    return self;
     //    [self setAuthToken: @"Test"];
 }
 
@@ -126,20 +130,17 @@
 
 - (void) createNewEventWithCompletion: (NSDictionary *) newEventDictionary completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler  {
     
-    NSString *urlString = [NSString stringWithFormat: @"%@%@",kAPI, @"newEvent"];
+    NSString *urlString = [NSString stringWithFormat: @"%@%@", kAPI, @"newEvent"];
     
     NSURL *url = [NSURL URLWithString:urlString];
     
-    NSDictionary *postDict = [NSDictionary dictionaryWithObjectsAndKeys:@"user", @"username",
-                              @"password", @"password", nil];
-    
-    NSData *postData = [self encodeDictionary:postDict];
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:newEventDictionary options:0 error:nil];
     
     // Create the request
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"POST"];
     [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)postData.length] forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/x-www-form-urlencoded charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
     
     NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -176,12 +177,12 @@
     
 }
 
-- (void) createNewAccountWithCompletion: (NSDictionary *)  newAccountInfo completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler {
+- (void) createAccountOrLoginWithCompletion: (NSDictionary *)  accountInfo completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler {
     
     NSString *urlString = [NSString stringWithFormat: @"%@%@", @"https://iamin.herokuapp.com/", @"login/newUser"];
     NSURL *url = [NSURL URLWithString:urlString];
     
-    NSData *postData = [NSJSONSerialization dataWithJSONObject:newAccountInfo options:0 error:nil];
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:accountInfo options:0 error:nil];
     
     // Create the request
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
