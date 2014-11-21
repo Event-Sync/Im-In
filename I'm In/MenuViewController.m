@@ -35,6 +35,17 @@
     self.signUpButton.titleLabel.font = [UIFont fontWithName:@"Shree Devanagari 714" size:37];
     self.loginButton.titleLabel.font = [UIFont fontWithName:@"Shree Devanagari 714" size:37];
     
+//    UIImage* logoImage = [UIImage imageNamed:@"transparent logo 2.tiff"];
+//    logoIma
+    UIImage * image = [UIImage imageNamed:@"transparent logo 2.tiff"];
+    CGSize scaleSize = CGSizeMake(50, 50);
+    UIGraphicsBeginImageContextWithOptions(scaleSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, scaleSize.width , scaleSize.height )];
+    UIImage * resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:resizedImage];
+    
+    
 }
 
 - (IBAction)signUpPressed:(id)sender {
