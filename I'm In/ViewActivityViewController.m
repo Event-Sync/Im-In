@@ -25,46 +25,41 @@
 
 @implementation ViewActivityViewController
 
-- (IBAction)updateButtonPressed:(UIButton *)sender {
-    NSLog(@"Update Button Pressed!");
-    
-    NSString *authToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
-    
-    NSDictionary *eventDictionary = @{
-                                   @"jwt": authToken,
-                                   @"event_name": _eventNameLabel.text,
-                                   @"event_description": @"description",
-                                   @"event_location": _locationLabel.text,
-                                   @"event_time": @"2014-12-20T19:19:41.174Z",
-                                   @"invitees": @[
-                                           @{
-                                               @"name": @"Sam2",
-                                               @"phone_number": @"+12064446666",
-                                               @"confirmed": @false
-                                                   },
-                                           @{
-                                               @"name": @"Matt2",
-                                               @"phone_number": @"+12064669888",
-                                               @"confirmed": @false
-                                                   }
-                                           ],
-                                   @"event_expired": @false
-                                       };
-
-    [[NetworkController sharedInstance] updateEventWithCompletion: eventDictionary completionHandler:^(NSError *error, BOOL response) {
-        if (error != nil) {
-            NSLog(@"%@", error.localizedDescription);
-        } else {
-            if (response == YES) {
-//                ActivityTabViewController *activityTabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ACTIVITYTAB_VC"];
-//                [self presentViewController:activityTabVC animated:true completion:nil];
-//                
-//                NSLog(@"Passed the network call for new event.");
-            }
-        }
-    }];
-    
-}
+//- (IBAction)updateButtonPressed:(UIButton *)sender {
+//    NSLog(@"Update Button Pressed!");
+//    
+//    NSString *authToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
+//    
+//    NSDictionary *eventDictionary = @{
+//                                   @"jwt": authToken,
+//                                   @"event_name": _eventNameLabel.text,
+//                                   @"event_description": @"description",
+//                                   @"event_location": _locationLabel.text,
+//                                   @"event_time": @"2014-12-20T19:19:41.174Z",
+//                                   @"invitees": @[
+//                                           @{
+//                                               @"name": @"Jacob",
+//                                               @"phone_number": @"+19152521559",
+//                                               @"confirmed": @false
+//                                                   }
+//                                           ],
+//                                   @"event_expired": @false
+//                                       };
+//
+//    [[NetworkController sharedInstance] updateEventWithCompletion: eventDictionary completionHandler:^(NSError *error, BOOL response) {
+//        if (error != nil) {
+//            NSLog(@"%@", error.localizedDescription);
+//        } else {
+//            if (response == YES) {
+////                ActivityTabViewController *activityTabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ACTIVITYTAB_VC"];
+////                [self presentViewController:activityTabVC animated:true completion:nil];
+////                
+////                NSLog(@"Passed the network call for new event.");
+//            }
+//        }
+//    }];
+//    
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -74,10 +69,19 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 40;
     
-//    [[NetworkController sharedInstance] fetchSingleEventUsingPath:@"" completionHandler:^(NSError *error, Activity *response) {
     if (_activity != nil) {
         [[NetworkController sharedInstance] fetchEventWithCompletion:_activity.eventId completionHandler: ^(NSError *error, Activity *response) {
             if (error != nil) {
+                
+                UIAlertView *alert = [[UIAlertView alloc]
+                                      initWithTitle:@"Error"
+                                      message:@"There is an error from server"
+                                      delegate:nil
+                                      cancelButtonTitle:@"Dismiss"
+                                      otherButtonTitles:nil];
+                
+                [alert show];
+                
                 NSLog(@"%@", error.localizedDescription);
             } else {
                 if (response != nil) {
@@ -93,6 +97,7 @@
                     }
                     
                     _attendees = _activity.attendees;
+                    [_tableView reloadData];
                 }
             }
         }];
@@ -118,18 +123,15 @@
     } else {
         cell.statusLabel.text = @"Not confirmed";
     }
-//        cell.imageView = newAttendee.
+    //cell.imageView.image = [UIImage imageNamed:@"defaultImage.jpeg"];
     
     return cell;
 
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (_attendees != nil) {
-        return _attendees.count;
-    } else {
-        return 0;
-    }
+    return _attendees.count;
+
 }
 
 

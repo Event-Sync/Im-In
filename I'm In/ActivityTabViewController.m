@@ -101,6 +101,7 @@
                 NSPredicate *upcoming = [NSPredicate predicateWithFormat:@"eventExpired == %@", [NSNumber numberWithBool:NO]];
                 NSArray *newArray = [NSArray arrayWithArray:_activities];
                 _filteredActivities = [newArray filteredArrayUsingPredicate:upcoming];
+                [_tableView reloadData];
             }
         }];
         

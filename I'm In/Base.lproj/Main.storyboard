@@ -213,22 +213,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xA-CM-x8w">
-                                <rect key="frame" x="22" y="510" width="557" height="55"/>
-                                <color key="backgroundColor" red="0.6794747364" green="0.52915823070000001" blue="1" alpha="0.87" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="BUZ-sp-his"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="UPDATE">
-                                    <color key="titleColor" red="1" green="0.95995121210000001" blue="0.38073567009999998" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="createButtonPressed:" destination="6qF-na-bLH" eventType="touchUpInside" id="Z2k-Ze-l0U"/>
-                                    <action selector="updateButtonPressed:" destination="Cvv-eH-5WD" eventType="touchUpInside" id="Lye-KO-wfL"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="14:00 MM/DD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVb-i1-3t8">
                                 <rect key="frame" x="141" y="187" width="221" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
