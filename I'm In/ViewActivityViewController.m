@@ -16,14 +16,55 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eventStatusLabel;
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
+@property (weak, nonatomic) IBOutlet UITextField *eventTimeTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (strong, nonatomic) NSMutableArray *attendees;
 
 @end
 
 @implementation ViewActivityViewController
+
+- (IBAction)updateButtonPressed:(UIButton *)sender {
+    NSLog(@"Update Button Pressed!");
+    
+    NSString *authToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
+    
+    NSDictionary *eventDictionary = @{
+                                   @"jwt": authToken,
+                                   @"event_name": _eventNameLabel.text,
+                                   @"event_description": @"description",
+                                   @"event_location": _locationTextField.text,
+                                   @"event_time": @"2014-12-20T19:19:41.174Z",
+                                   @"invitees": @[
+                                           @{
+                                               @"name": @"Sam2",
+                                               @"phone_number": @"+12064446666",
+                                               @"confirmed": @false
+                                                   },
+                                           @{
+                                               @"name": @"Matt2",
+                                               @"phone_number": @"+12064669888",
+                                               @"confirmed": @false
+                                                   }
+                                           ],
+                                   @"event_expired": @false
+                                       };
+
+    [[NetworkController sharedInstance] updateEventWithCompletion: eventDictionary completionHandler:^(NSError *error, BOOL response) {
+        if (error != nil) {
+            NSLog(@"%@", error.localizedDescription);
+        } else {
+            if (response == YES) {
+//                ActivityTabViewController *activityTabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ACTIVITYTAB_VC"];
+//                [self presentViewController:activityTabVC animated:true completion:nil];
+//                
+//                NSLog(@"Passed the network call for new event.");
+            }
+        }
+    }];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,8 +84,8 @@
                     _activity = response;
                     
                     _eventNameLabel.text = _activity.eventName;
-                    _timeLabel.text = _activity.eventTime;
-                    _locationLabel.text = _activity.eventLocation;
+                    _eventTimeTextField.text = _activity.eventTime;
+                    _locationTextField.text = _activity.eventLocation;
                     if (_activity.eventExpired) {
                         _eventStatusLabel.text = @"Expired";
                     } else {

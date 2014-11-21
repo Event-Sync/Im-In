@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ActivityProtocol.h"
+
+@class NewActivityViewController;
+@protocol ActivityDelegate
+- (void) reloadActivity:(NewActivityViewController *) newActivityViewController;
+@end
 
 @interface NewActivityViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UITextField *activityNameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *timeTextField;
-@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
-@property (weak, nonatomic) IBOutlet UITextField *eventDescriptionTextField;
 
 
 @end

@@ -28,6 +28,7 @@
 		5294BF631A1E7C9200E9EA2D /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5294BF5B1A1E7C9200E9EA2D /* ActivityTableViewCell.xib */; };
 		5294BF641A1E7C9200E9EA2D /* AttendeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF5D1A1E7C9200E9EA2D /* AttendeeTableViewCell.m */; };
 		5294BF651A1E7C9200E9EA2D /* AttendeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5294BF5E1A1E7C9200E9EA2D /* AttendeeTableViewCell.xib */; };
+		52D3D8CD1A1EC01B004B07D9 /* ActivityProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D3D8CC1A1EC01B004B07D9 /* ActivityProtocol.m */; };
 		52FFCCB51A1A795F00745607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB41A1A795F00745607 /* main.m */; };
 		52FFCCB81A1A795F00745607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB71A1A795F00745607 /* AppDelegate.m */; };
 		52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFCCBF1A1A795F00745607 /* Main.storyboard */; };
@@ -84,6 +85,8 @@
 		5294BF5C1A1E7C9200E9EA2D /* AttendeeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendeeTableViewCell.h; path = "I'm In/AttendeeTableViewCell.h"; sourceTree = "<group>"; };
 		5294BF5D1A1E7C9200E9EA2D /* AttendeeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendeeTableViewCell.m; path = "I'm In/AttendeeTableViewCell.m"; sourceTree = "<group>"; };
 		5294BF5E1A1E7C9200E9EA2D /* AttendeeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AttendeeTableViewCell.xib; path = "I'm In/AttendeeTableViewCell.xib"; sourceTree = "<group>"; };
+		52D3D8CB1A1EC01B004B07D9 /* ActivityProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityProtocol.h; path = "I'm In/ActivityProtocol.h"; sourceTree = "<group>"; };
+		52D3D8CC1A1EC01B004B07D9 /* ActivityProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityProtocol.m; path = "I'm In/ActivityProtocol.m"; sourceTree = "<group>"; };
 		52FFCCAF1A1A795F00745607 /* I'm In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I'm In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFCCB31A1A795F00745607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FFCCB41A1A795F00745607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				5294BF4E1A1E7C7400E9EA2D /* SignUpViewController.m */,
 				5294BF4F1A1E7C7400E9EA2D /* ViewActivityViewController.h */,
 				5294BF501A1E7C7400E9EA2D /* ViewActivityViewController.m */,
+				52D3D8CB1A1EC01B004B07D9 /* ActivityProtocol.h */,
+				52D3D8CC1A1EC01B004B07D9 /* ActivityProtocol.m */,
 			);
 			name = "Controller Layer";
 			path = ..;
@@ -360,6 +365,7 @@
 				5294BF3F1A1E7C3900E9EA2D /* Attendee.m in Sources */,
 				5294BF511A1E7C7400E9EA2D /* ActivityTabViewController.m in Sources */,
 				52FFCCB51A1A795F00745607 /* main.m in Sources */,
+				52D3D8CD1A1EC01B004B07D9 /* ActivityProtocol.m in Sources */,
 				5294BF551A1E7C7400E9EA2D /* NewActivityViewController.m in Sources */,
 				5294BF541A1E7C7400E9EA2D /* NetworkController.m in Sources */,
 				5294BF571A1E7C7400E9EA2D /* SignUpViewController.m in Sources */,
