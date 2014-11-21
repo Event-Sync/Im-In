@@ -17,6 +17,7 @@
 
 @interface ActivityTabViewController () <UITableViewDataSource, UITableViewDelegate>
 
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *activities;
 @property (strong, nonatomic) NSArray *filteredActivities;
@@ -25,7 +26,9 @@
 
 @implementation ActivityTabViewController
 
-- (IBAction)segmentedControlPressed:(UISegmentedControl *)sender {
+
+- (IBAction)segmentedControlPressed:(UISegmentedControl*)sender {
+
     
     NSPredicate *upcoming = [NSPredicate predicateWithFormat:@"eventExpired == %@", [NSNumber numberWithBool:NO]];
     NSPredicate *past = [NSPredicate predicateWithFormat:@"eventExpired == %@", [NSNumber numberWithBool:YES]];
@@ -36,7 +39,8 @@
     } else {
         _filteredActivities = [newArray filteredArrayUsingPredicate:past];
     }
-    
+
+
     NSLog(@"%lu", (unsigned long) _filteredActivities.count);
     
     [_tableView reloadData];

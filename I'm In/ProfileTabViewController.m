@@ -27,11 +27,13 @@
     
 }
 
-- (IBAction)logoutButtonPressed:(id)sender {
+
+- (IBAction)logoutPressed:(id)sender {
+
     NSLog(@"Logout Pressed");
     MenuViewController *menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MENU_VC"];
     [self presentViewController:menuVC animated:true completion:nil];
-}
 
+}
 
 @end

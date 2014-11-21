@@ -25,6 +25,19 @@
     [[self.registerButton layer] setBorderColor:[UIColor whiteColor].CGColor];
     self.registerButton.titleEdgeInsets = UIEdgeInsetsMake(7, 0, 0, 0);
     self.registerButton.titleLabel.font = [UIFont fontWithName:@"Shree Devanagari 714" size:37];
+    
+    self.nameTextField.delegate = self;
+    self.phoneNumberTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.nameTextField resignFirstResponder];
+    [self.phoneNumberTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+    
+    return YES;
 }
 
 - (IBAction)registerPressed:(id)sender {
