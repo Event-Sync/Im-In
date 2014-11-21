@@ -35,10 +35,33 @@
     ActivityProtocol *activityProtocol = [[ActivityProtocol alloc] init];
     activityProtocol.delegate = self;
     
+    [[self.createButton layer] setBorderWidth:2.0f];
+    [[self.createButton layer] setCornerRadius:10];
+    [[self.createButton layer] setBorderColor:[UIColor whiteColor].CGColor];
+    self.createButton.titleEdgeInsets = UIEdgeInsetsMake(7, 0, 0, 0);
+    self.createButton.titleLabel.font = [UIFont fontWithName:@"Shree Devanagari 714" size:37];
+    
+    self.enterEventNameTextField.delegate = self;
+    self.enterLocationTextField.delegate = self;
+    self.enterPhoneNumberTextField.delegate = self;
+    self.enterTimeTextField.delegate = self;
+    self.describeEventTextField.delegate = self;
+    
+    
 }
 
 - (void)processCompleted{
     NSLog(@"processCompleted");
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.enterEventNameTextField resignFirstResponder];
+    [self.enterLocationTextField resignFirstResponder];
+    [self.enterPhoneNumberTextField resignFirstResponder];
+    [self.enterTimeTextField resignFirstResponder];
+    [self.describeEventTextField resignFirstResponder];
+    
+    return YES;
 }
 
 - (IBAction)createButtonPressed:(id)sender {

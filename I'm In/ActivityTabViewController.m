@@ -53,7 +53,7 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newEventButtonPressed)];
     
     self.navigationItem.rightBarButtonItem = addButton;
-    self.title = @"Activities";
+    self.title = @"Activity";
     
     // load activities array
     

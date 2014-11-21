@@ -14,7 +14,13 @@
 - (void) reloadActivity:(NewActivityViewController *) newActivityViewController;
 @end
 
-@interface NewActivityViewController : UIViewController
+@interface NewActivityViewController : UIViewController <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *createButton;
+@property (weak, nonatomic) IBOutlet UITextField *enterEventNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *describeEventTextField;
+@property (weak, nonatomic) IBOutlet UITextField *enterTimeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *enterLocationTextField;
+@property (weak, nonatomic) IBOutlet UITextField *enterPhoneNumberTextField;
 
 
 @end
