@@ -44,6 +44,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newEventButtonPressed)];
+    
+    self.navigationItem.rightBarButtonItem = addButton;
+    self.title = @"Activities";
+    
+    // load activities array
+    
+    [[NetworkController sharedInstance] fetchAllEventsUsingPath:^(NSError *error, NSMutableArray *response) {
+        if (error != nil) {
+            NSLog(@"%@", error.localizedDescription);
+        } else {
+            _activities = response;
+            
+            NSPredicate *upcoming = [NSPredicate predicateWithFormat:@"eventExpired == %@", [NSNumber numberWithBool:NO]];
+            NSArray *newArray = [NSArray arrayWithArray:_activities];
+            _filteredActivities = [newArray filteredArrayUsingPredicate:upcoming];
+        }
+    }];
+    
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
+    
+    
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     NSString *authToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
     if (!authToken) {
         MenuViewController *menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MENU_VC"];
@@ -78,10 +110,7 @@
     }
 }
 
-- (void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
 
-}
 
 - (void) newEventButtonPressed {
     NSLog(@"Add button pressed");
@@ -101,6 +130,12 @@
     cell.textLabel.text = newActivity.eventName;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"DELETE");
+    }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

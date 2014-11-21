@@ -20,7 +20,33 @@
     [super viewDidLoad];
     
     self.title = @"Sign Up";
+    [[self.registerButton layer] setBorderWidth:2.0f];
+    [[self.registerButton layer] setCornerRadius:10];
+    [[self.registerButton layer] setBorderColor:[UIColor whiteColor].CGColor];
+    self.registerButton.titleEdgeInsets = UIEdgeInsetsMake(7, 0, 0, 0);
+    self.registerButton.titleLabel.font = [UIFont fontWithName:@"Shree Devanagari 714" size:37];
+    
+    self.nameTextField.delegate = self;
+    self.phoneNumberTextField.delegate = self;
+    self.passwordTextField.delegate = self;
 }
+
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+
+    if (textField == self.nameTextField) {
+            [self.nameTextField resignFirstResponder];
+    }
+    else if (textField == self.phoneNumberTextField) {
+        [self.phoneNumberTextField resignFirstResponder];
+    }
+    else if (textField == self.passwordTextField) {
+        [self.passwordTextField resignFirstResponder];
+    }
+    return YES;
+}
+
 
 - (IBAction)registerPressed:(id)sender {
     
