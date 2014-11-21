@@ -16,9 +16,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eventStatusLabel;
-@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
-@property (weak, nonatomic) IBOutlet UITextField *eventTimeTextField;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (strong, nonatomic) NSMutableArray *attendees;
 
 @end
@@ -34,7 +34,7 @@
                                    @"jwt": authToken,
                                    @"event_name": _eventNameLabel.text,
                                    @"event_description": @"description",
-                                   @"event_location": _locationTextField.text,
+                                   @"event_location": _locationLabel.text,
                                    @"event_time": @"2014-12-20T19:19:41.174Z",
                                    @"invitees": @[
                                            @{
@@ -84,8 +84,8 @@
                     _activity = response;
                     
                     _eventNameLabel.text = _activity.eventName;
-                    _eventTimeTextField.text = _activity.eventTime;
-                    _locationTextField.text = _activity.eventLocation;
+                    _timeLabel.text = _activity.eventTime;
+                    _locationLabel.text = _activity.eventLocation;
                     if (_activity.eventExpired) {
                         _eventStatusLabel.text = @"Expired";
                     } else {
@@ -101,6 +101,7 @@
         _tableView.delegate = self;
     }
 }
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
