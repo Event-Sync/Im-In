@@ -39,7 +39,6 @@
 		D515DED51A1EA02900B1F400 /* road-trip-ftr_Fotor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D515DED41A1EA02900B1F400 /* road-trip-ftr_Fotor.jpg */; };
 		D515DED91A1EA40700B1F400 /* unsplash_52c319226cefb_1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D515DED81A1EA40700B1F400 /* unsplash_52c319226cefb_1.jpeg */; };
 		D515DEDB1A1EAD7700B1F400 /* unsplash_52c319226cefb_1_Fotor 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D515DEDA1A1EAD7700B1F400 /* unsplash_52c319226cefb_1_Fotor 2.jpg */; };
-		D515DEE31A1EE66800B1F400 /* transparent logo 2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = D515DEE21A1EE66800B1F400 /* transparent logo 2.tiff */; };
 		D519DF4E1A1A88CA0076EE0E /* concert.png in Resources */ = {isa = PBXBuildFile; fileRef = D519DF4D1A1A88CA0076EE0E /* concert.png */; };
 		D58655F31A1D068800736DFC /* waterPeople.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D58655F21A1D068800736DFC /* waterPeople.jpeg */; };
 		D59915721A1F2192007861B6 /* activities.png in Resources */ = {isa = PBXBuildFile; fileRef = D59915711A1F2192007861B6 /* activities.png */; };
@@ -111,7 +110,6 @@
 		D515DED41A1EA02900B1F400 /* road-trip-ftr_Fotor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "road-trip-ftr_Fotor.jpg"; sourceTree = "<group>"; };
 		D515DED81A1EA40700B1F400 /* unsplash_52c319226cefb_1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unsplash_52c319226cefb_1.jpeg; sourceTree = "<group>"; };
 		D515DEDA1A1EAD7700B1F400 /* unsplash_52c319226cefb_1_Fotor 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "unsplash_52c319226cefb_1_Fotor 2.jpg"; sourceTree = "<group>"; };
-		D515DEE21A1EE66800B1F400 /* transparent logo 2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "transparent logo 2.tiff"; sourceTree = "<group>"; };
 		D519DF4D1A1A88CA0076EE0E /* concert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = concert.png; sourceTree = "<group>"; };
 		D58655F21A1D068800736DFC /* waterPeople.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waterPeople.jpeg; sourceTree = "<group>"; };
 		D59915711A1F2192007861B6 /* activities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = activities.png; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 			children = (
 				D59915731A1F2196007861B6 /* profile.png */,
 				D59915711A1F2192007861B6 /* activities.png */,
-				D515DEE21A1EE66800B1F400 /* transparent logo 2.tiff */,
 				D515DEDA1A1EAD7700B1F400 /* unsplash_52c319226cefb_1_Fotor 2.jpg */,
 				D515DED81A1EA40700B1F400 /* unsplash_52c319226cefb_1.jpeg */,
 				D515DED41A1EA02900B1F400 /* road-trip-ftr_Fotor.jpg */,
@@ -353,7 +350,6 @@
 				52FFCCC11A1A795F00745607 /* Main.storyboard in Resources */,
 				5294BF3D1A1E7C3900E9EA2D /* activity.json in Resources */,
 				52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */,
-				D515DEE31A1EE66800B1F400 /* transparent logo 2.tiff in Resources */,
 				520DD43B1A1BBF08004EBE2B /* newActivity.json in Resources */,
 				D515DEDB1A1EAD7700B1F400 /* unsplash_52c319226cefb_1_Fotor 2.jpg in Resources */,
 				D58655F31A1D068800736DFC /* waterPeople.jpeg in Resources */,
