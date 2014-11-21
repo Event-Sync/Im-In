@@ -10,7 +10,7 @@
 #import "ActivityTabViewController.h"
 #import "NetworkController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -41,11 +41,27 @@
     
     [[NetworkController sharedInstance] loginWithCompletion:loginDictionary completionHandler:^(NSError *error, BOOL response) {
         if (error != nil) {
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"Login Error!"
+                                  message:@"Unable to log in, try again later"
+                                  delegate:nil
+                                  cancelButtonTitle:@"OK!"
+                                  otherButtonTitles:nil];
+            [alert show];
+            
             NSLog(@"%@", error.localizedDescription);
         } else {
             if (response == YES) {
-                ActivityTabViewController *activityTabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ACTIVITYTAB_VC"];
-                [self presentViewController:activityTabVC animated:true completion:nil];
+                
+                UIAlertView *alert = [[UIAlertView alloc]
+                                      initWithTitle:@"Welcome!"
+                                      message:@"You're now logged in"
+                                      delegate:self
+                                      cancelButtonTitle:@"OK!"
+                                      otherButtonTitles:nil];
+                [alert show];
+                
+
             }
         }
     }];

@@ -18,7 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *timeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *locationTextField;
 @property (weak, nonatomic) IBOutlet UITextField *eventDescriptionTextField;
-//@property (weak, nonatomic)
+
+@property (strong, nonatomic) NSMutableArray *attendees;
+
 @end
 
 @implementation NewActivityViewController
@@ -77,13 +79,13 @@
         @"event_time": @"2014-12-20T19:19:41.174Z", // _timeTextField.text,
         @"invitees": @[
                      @{
-                         @"name": _activityNameTextField.text,
-                         @"phone_number": _telephoneNoTextField.text,
+                         @"name": @"Sam",
+                         @"phone_number": @"+12064669834",
                          @"confirmed": @false
                      },
                      @{
-                         @"name": @"Matt",
-                         @"phone_number": @"2064669834",
+                         @"name": @"Jacob",
+                         @"phone_number": @"+19152521559",
                          @"confirmed": @false
                      }
                      ],

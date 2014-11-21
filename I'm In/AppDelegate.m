@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "MenuViewController.h"
 
+#import "ProfileTabViewController.h"
+#import "ActivityTabViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -18,8 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-//    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-//    
+//    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//
 //    NSString *authToken = [[NSUserDefaults standardUserDefaults] objectForKey:authToken];
 //    if (!authToken) {
 //        MenuViewController *menuVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"MENU_VC"];
@@ -28,6 +31,31 @@
 //        // set authtoken
 //        NSLog(@"auth token set!");
 //    }
+    
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    
+//    UITabBarController *tabController = [[UITabBarController alloc] init];
+//    
+//    ProfileTabViewController *profileViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
+//    
+//    ActivityTabViewController *activityViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"ActivityViewController"];
+//    
+//    profileViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Profile" image:nil tag:101];
+//    activityViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Activity" image:nil tag:102];
+//    
+//    UINavigationController *profileNavController = [[UINavigationController alloc] initWithRootViewController:profileViewController];
+//    
+//    tabController.viewControllers = @[activityViewController, profileNavController];
+//    
+//    [self.window addSubview:tabController.view];
+//    
+//    self.window.rootViewController = tabController;
+//    [self.window makeKeyAndVisible];
+    
+//    UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Profile" image:nil tag:101];
+//    UITabBarController *tabController = (UITabBarController *)self.window.rootViewController;
+//    
+//    [tabController.tabBar setItems:@[item]];
     
     return YES;
 }

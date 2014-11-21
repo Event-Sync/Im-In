@@ -10,7 +10,7 @@
 #import "ActivityTabViewController.h"
 #import "NetworkController.h"
 
-@interface SignUpViewController ()
+@interface SignUpViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -40,6 +40,7 @@
     return YES;
 }
 
+
 - (IBAction)registerPressed:(id)sender {
     
     NSLog(@"Register pressed!");
@@ -53,12 +54,30 @@
     
     [[NetworkController sharedInstance] createAccountWithCompletion:newAccountDict completionHandler:^(NSError *error, BOOL response) {
         
-        if (error != nil) {
+        if (error != nil || response == NO) {
+            
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"Sign-up Error!"
+                                  message:@"Unable to sign up"
+                                  delegate:nil
+                                  cancelButtonTitle:@"OK!"
+                                  otherButtonTitles:nil];
+            [alert show];
+            
+            
             NSLog(@"%@", error.localizedDescription);
         } else {
             if (response == YES) {
-                ActivityTabViewController *activityTabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ACTIVITYTAB_VC"];
-                [self presentViewController:activityTabVC animated:true completion:nil];
+
+                
+                UIAlertView *alert = [[UIAlertView alloc]
+                                      initWithTitle:@"Welcome!"
+                                      message:@"You're now logged in"
+                                      delegate:self
+                                      cancelButtonTitle:@"OK!"
+                                      otherButtonTitles:nil];
+                [alert show];
+
             }
         }
     }];
@@ -66,7 +85,10 @@
     
 }
 
-
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    ActivityTabViewController *activityTabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ACTIVITYTAB_VC"];
+    [self presentViewController:activityTabVC animated:true completion:nil];
+}
 
 
 
