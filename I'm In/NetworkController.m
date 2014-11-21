@@ -325,7 +325,7 @@
                     }];
                 } else {
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                        completionHandler (error, NO);
+                        completionHandler (nil, NO);
                     }];
                 }
             }

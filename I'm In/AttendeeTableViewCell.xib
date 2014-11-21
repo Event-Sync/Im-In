@@ -14,9 +14,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kqa-r7-ypp">
+                    <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Kqa-r7-ypp">
                         <rect key="frame" x="0.0" y="0.0" width="69" height="70"/>
-                        <color key="backgroundColor" red="0.2181688437" green="0.79709403349999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="69" id="BOx-PN-0tw"/>
                             <constraint firstAttribute="height" constant="70" id="V5C-Pd-kZJ"/>
@@ -82,4 +81,7 @@
             <point key="canvasLocation" x="191" y="281.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="defaultImage.jpeg" width="69" height="69"/>
+    </resources>
 </document>

@@ -28,6 +28,7 @@
 		5294BF631A1E7C9200E9EA2D /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5294BF5B1A1E7C9200E9EA2D /* ActivityTableViewCell.xib */; };
 		5294BF641A1E7C9200E9EA2D /* AttendeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294BF5D1A1E7C9200E9EA2D /* AttendeeTableViewCell.m */; };
 		5294BF651A1E7C9200E9EA2D /* AttendeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5294BF5E1A1E7C9200E9EA2D /* AttendeeTableViewCell.xib */; };
+		52CB84F41A1F84D600E56D04 /* defaultImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 52CB84F31A1F84D600E56D04 /* defaultImage.jpeg */; };
 		52D3D8CD1A1EC01B004B07D9 /* ActivityProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D3D8CC1A1EC01B004B07D9 /* ActivityProtocol.m */; };
 		52FFCCB51A1A795F00745607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB41A1A795F00745607 /* main.m */; };
 		52FFCCB81A1A795F00745607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FFCCB71A1A795F00745607 /* AppDelegate.m */; };
@@ -85,6 +86,7 @@
 		5294BF5C1A1E7C9200E9EA2D /* AttendeeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendeeTableViewCell.h; path = "I'm In/AttendeeTableViewCell.h"; sourceTree = "<group>"; };
 		5294BF5D1A1E7C9200E9EA2D /* AttendeeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendeeTableViewCell.m; path = "I'm In/AttendeeTableViewCell.m"; sourceTree = "<group>"; };
 		5294BF5E1A1E7C9200E9EA2D /* AttendeeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AttendeeTableViewCell.xib; path = "I'm In/AttendeeTableViewCell.xib"; sourceTree = "<group>"; };
+		52CB84F31A1F84D600E56D04 /* defaultImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultImage.jpeg; sourceTree = "<group>"; };
 		52D3D8CB1A1EC01B004B07D9 /* ActivityProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityProtocol.h; path = "I'm In/ActivityProtocol.h"; sourceTree = "<group>"; };
 		52D3D8CC1A1EC01B004B07D9 /* ActivityProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityProtocol.m; path = "I'm In/ActivityProtocol.m"; sourceTree = "<group>"; };
 		52FFCCAF1A1A795F00745607 /* I'm In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I'm In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 		52FFCCB21A1A795F00745607 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				52CB84F31A1F84D600E56D04 /* defaultImage.jpeg */,
 				D58655F21A1D068800736DFC /* waterPeople.jpeg */,
 				52FFCCEB1A1AAE1000745607 /* activity.jpeg */,
 				52FFCCC21A1A795F00745607 /* Images.xcassets */,
@@ -329,6 +332,7 @@
 				5294BF3D1A1E7C3900E9EA2D /* activity.json in Resources */,
 				52FFCCC61A1A795F00745607 /* LaunchScreen.xib in Resources */,
 				520DD43B1A1BBF08004EBE2B /* newActivity.json in Resources */,
+				52CB84F41A1F84D600E56D04 /* defaultImage.jpeg in Resources */,
 				D58655F31A1D068800736DFC /* waterPeople.jpeg in Resources */,
 				520DD4331A1BBE4F004EBE2B /* signup.json in Resources */,
 				5294BF401A1E7C3900E9EA2D /* getAllEvents.json in Resources */,
