@@ -25,6 +25,20 @@
     [[self.loginButton layer] setBorderColor:[UIColor whiteColor].CGColor];
     self.loginButton.titleEdgeInsets = UIEdgeInsetsMake(7, 0, 0, 0);
     self.loginButton.titleLabel.font = [UIFont fontWithName:@"Shree Devanagari 714" size:37];
+    
+    self.phoneNumberTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    if (textField == self.phoneNumberTextField) {
+        [self.phoneNumberTextField resignFirstResponder];
+    }
+    else if (textField == self.passwordTextField) {
+        [self.passwordTextField resignFirstResponder];
+    }
+    return YES;
 }
 
 - (IBAction)loginPressed:(id)sender {

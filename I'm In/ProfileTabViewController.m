@@ -25,6 +25,8 @@
     self.logoutButton.titleEdgeInsets = UIEdgeInsetsMake(7, 0, 0, 0);
     self.logoutButton.titleLabel.font = [UIFont fontWithName:@"Shree Devanagari 714" size:37];
     
+    
+    
 }
 
 - (IBAction)logoutButtonPressed:(id)sender {
