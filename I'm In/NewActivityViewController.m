@@ -10,34 +10,56 @@
 #import "NetworkController.h"
 #import "ActivityTabViewController.h"
 
+
 @interface NewActivityViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *telephoneNoTextField;
+@property (weak, nonatomic) IBOutlet UITextField *activityNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *timeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
+@property (weak, nonatomic) IBOutlet UITextField *eventDescriptionTextField;
+//@property (weak, nonatomic)
 @end
 
 @implementation NewActivityViewController
+
+- (IBAction)dateButtonPressed:(UIButton *)sender {
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     self.title = @"New Event";
+    
+    ActivityProtocol *activityProtocol = [[ActivityProtocol alloc] init];
+    activityProtocol.delegate = self;
+    
+}
+
+- (void)processCompleted{
+    NSLog(@"processCompleted");
 }
 
 - (IBAction)createButtonPressed:(id)sender {
     NSLog(@"Create Button Pressed!");
     
+    NSString *authToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
+    
     NSDictionary *newEventDict = @{
-        @"event_name": @"Interstellar movie meetup",
-        @"event_description": @"movie meetup description",
-        @"event_location": @"Code Fellows Cinema",
-        @"event_time": @"MM/NN/YYYY HH:MMAM",
+        @"jwt": authToken,
+        @"event_name": _activityNameTextField.text,
+        @"event_description": _eventDescriptionTextField.text,
+        @"event_location": @"new location", //_locationTextField.text,
+        @"event_time": @"2014-12-20T19:19:41.174Z", // _timeTextField.text,
         @"invitees": @[
                      @{
-                         @"name": @"Sam",
-                         @"phone_number": @"2064669834",
+                         @"name": _activityNameTextField.text,
+                         @"phone_number": _telephoneNoTextField.text,
                          @"confirmed": @false
                      },
                      @{
-                         @"name": @"Sam",
+                         @"name": @"Matt",
                          @"phone_number": @"2064669834",
                          @"confirmed": @false
                      }
@@ -54,9 +76,12 @@
                 [self presentViewController:activityTabVC animated:true completion:nil];
     
                 NSLog(@"Passed the network call for new event.");
+                
+
             }
         }
     }];
 }
+
 
 @end

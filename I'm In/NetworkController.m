@@ -200,11 +200,72 @@
             if ([response isKindOfClass: [NSHTTPURLResponse class]]) {
                 NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                 
+                NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                NSLog(@"%@", responseString);
+                
                 if (httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299) {
+                    
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                         completionHandler (nil, YES);
                     }];
+    
                 } else {
+                    
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        completionHandler (error, NO);
+                    }];
+                }
+            }
+            
+        }
+        
+    }];
+    [dataTask resume];
+    
+}
+
+- (void) updateEventWithCompletion: (NSDictionary *) eventDictionary completionHandler: (void(^) (NSError *error, BOOL response)) completionHandler  {
+    
+    NSString *urlString = [NSString stringWithFormat: @"%@%@", kAPI, kAPIupdateEventPath];
+    
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:eventDictionary options:0 error:nil];
+    
+    // Create the request
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)postData.length] forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        if (error != nil) {
+            if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
+                NSLog(@"HTTP Error: %ld %@", (long)httpResponse.statusCode, error);
+                return;
+            }
+            NSLog(@"Error %@", error.localizedDescription);
+            return;
+        }
+        
+        if (response != nil) {
+            if ([response isKindOfClass: [NSHTTPURLResponse class]]) {
+                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                
+                NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                NSLog(@"%@", responseString);
+                
+                if (httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299) {
+                    
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        completionHandler (nil, YES);
+                    }];
+                    
+                } else {
+                    
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                         completionHandler (error, NO);
                     }];
